@@ -1,0 +1,9 @@
+Template-driven Forms
+What are Template-driven Forms?
+
+Template-driven forms in Angular are like filling out a paper form. You design the form in the HTML template, and Angular takes care of the rest.
+
+Why do we need it?
+
+Simplicity: It is simple and easy to use for basic forms.
+Declarative: The form logic is declared in the template.

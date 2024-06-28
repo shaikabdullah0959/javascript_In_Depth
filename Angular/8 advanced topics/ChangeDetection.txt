@@ -1,0 +1,26 @@
+Change Detection
+What is Change Detection?
+
+Change detection in Angular is like a supervisor who watches for changes in data and updates the view accordingly.
+
+Why do we need it?
+
+Synchronization: It ensures that the view is always synchronized with the data.
+Optimization: It provides ways to optimize performance by controlling when and how changes are detected.
+
+import { Component, ChangeDetectorRef } from '@angular/core';
+
+@Component({
+  selector: 'app-my-component',
+  template: '<p>{{data}}</p>'
+})
+export class MyComponent {
+  data = 'Initial data';
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  updateData() {
+    this.data = 'Updated data';
+    this.cdr.detectChanges(); // Manually trigger change detection
+  }
+}

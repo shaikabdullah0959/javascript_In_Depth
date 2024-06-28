@@ -1,0 +1,27 @@
+What are Pipes?
+
+    Pipes in Angular are like filters that you can use to transform data before displaying it in the template.
+
+Why do we need it?
+
+    Transformation: They allow you to transform data into a desired format.
+    Reusability: They can be reused across different components.
+
+    <p>{{ today | date }}</p>
+    <p>{{ 'hello' | uppercase }}</p>
+
+Creating Custom Pipes:
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({name: 'customPipe'})
+export class CustomPipe implements PipeTransform {
+  transform(value: string): string {
+    return 'Custom: ' + value;
+  }
+}
+
+Using Custom Pipe:
+<p>{{ 'text' | customPipe }}</p>
+
+

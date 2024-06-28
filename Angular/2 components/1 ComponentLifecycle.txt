@@ -1,0 +1,15 @@
+What is the Component Lifecycle?
+
+The component lifecycle in Angular is like the stages of a plant growing: from planting the seed to its full growth.
+ It consists of different phases that a component goes through from creation to destruction.
+
+  Basic Phases:
+
+    ngOnInit: Called after the component is initialized.
+    ngOnChanges: Called when an input property changes.
+    ngDoCheck: Called during every change detection run.
+    ngAfterContentInit: Called after content is projected into the component.
+    ngAfterContentChecked: Called after every check of projected content.
+    ngAfterViewInit: Called after the component's view is initialized.
+    ngAfterViewChecked: Called after every check of the component's view.
+    ngOnDestroy: Called before the component is destroyed.
