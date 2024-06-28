@@ -1,0 +1,13 @@
+Directives in Angular are like special instructions you give to HTML elements to change their behavior or appearance.
+
+Types of Directives:
+
+Structural Directives: Change the structure of the DOM (e.g., *ngIf, *ngFor).
+    <div *ngIf="isVisible">This is visible</div>
+    <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+    </ul>
+
+Attribute Directives: Change the appearance or behavior of an element (e.g., ngClass, ngStyle).
+    <div [ngClass]="{'active': isActive}">This has a class</div>
+    <div [ngStyle]="{'color': color}">This has a style</div>

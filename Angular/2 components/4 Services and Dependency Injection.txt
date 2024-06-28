@@ -1,0 +1,37 @@
+What are Services?
+
+Services in Angular are like assistants that do specific tasks for your components.
+They help keep your code organized and reusable.
+
+    import { Injectable } from '@angular/core';
+
+    @Injectable({
+         providedIn: 'root'
+    })
+    export class MyService {
+        getData() {
+            return ['Data1', 'Data2', 'Data3'];
+        }
+    }
+
+What is Dependency Injection?
+    Dependency Injection (DI) in Angular is like ordering food at a restaurant: you ask for what you need (a service),
+    and the waiter (Angular) brings it to you.
+
+    import { Component, OnInit } from '@angular/core';
+    import { MyService } from './my-service.service';
+
+    @Component({
+        selector: 'my-component',
+        template: '<div>{{data}}</div>'
+    })
+    
+    export class MyComponent implements OnInit {
+        data: string[];
+
+        constructor(private myService: MyService) { }
+
+        ngOnInit() {
+            this.data = this.myService.getData();
+        }
+    }

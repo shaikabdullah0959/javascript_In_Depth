@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=uqU89z8DRDo - 30 Days DSA plan for job
+
 DSA patterns
 https://www.youtube.com/watch?v=xo7XrRVxH8Y
 https://www.youtube.com/watch?v=eiC58R16hb8
@@ -6,6 +8,13 @@ https://www.youtube.com/watch?v=eiC58R16hb8
 https://github.com/singhsanket143/Data-Structures-Algorithms-Problem-Solving - dsa quetions
 https://www.youtube.com/watch?v=43mN80PML8U
 
+
+https://www.youtube.com/watch?v=DjYZk8nrXVY- important DSA patterns - Leet code
+https://www.youtube.com/watch?v=W-_qnPYxHdU - interview bit plan to solve DSA
+https://www.youtube.com/watch?v=Nx4bvwU0DqE - How to start leet code
+https://www.youtube.com/watch?v=Cb7At7agjlc - How to solve leet code
+https://www.youtube.com/watch?v=1Z3RrRYIoVs - Learn DSA in 6 months
+https://www.youtube.com/watch?v=tTyqtk3V-h4 - All leet code patterns
 
 
 2. Grasp Time and Space Complexity:

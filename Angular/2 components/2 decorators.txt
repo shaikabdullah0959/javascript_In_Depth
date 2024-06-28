@@ -1,0 +1,127 @@
+Class Decorators:
+
+@NgModule: Defines a angular module
+@Component: Defines a component.
+@Directive: Defines a directive.
+@Pipe: Defines a pipe.
+@Injectable: Defines a service that can be injected.
+
+
+Property Decorators:
+
+@Input: Used to receive and bind data from the parent component to the child component.
+@Output: Used to receive and bind data from the child component to the parent component.
+@ContentChild & @ContentChildren: Used to query and get references to content received from the parent component.
+@ViewChild & @ViewChildren: Used to query and get references to DOM elements.
+@HostBinding: Allows you to bind to a property of the host element.
+
+@ViewChild - can access child component or DOM element in parent component
+
+1. @ViewChild in Angular is a decorator that allows you to access a child component, directive, or DOM element from a parent component class.
+   This is useful for manipulating the child component or DOM element directly from the parent component.
+
+parent.component.ts:
+    @Component({
+    selector: 'app-parent',
+    template: `
+        <app-child></app-child>
+        <button (click)="changeChildProperty()">Change Child Property</button>
+        <input #myInput type="text" />
+    `
+    })
+    export class ParentComponent implements AfterViewInit {
+        @ViewChild(ChildComponent) childComponent!: ChildComponent;
+        @ViewChild('myInput') myInput!: ElementRef;
+
+        ngAfterViewInit() {
+            console.log(this.childComponent);
+            console.log(this.myInput.nativeElement.value); //Access DOM Elements using template reference variable.
+        }
+
+        changeChildProperty() {
+            this.childComponent.childProperty = 'New Value';
+        }
+    }
+
+child.component.ts:
+    @Component({
+    selector: 'app-child',
+    template: `
+        <p>Child Component: {{ childProperty }}</p>
+    `
+    })
+    export class ChildComponent {
+        childProperty: string = 'Initial Value';
+    }
+
+2. Static Option: By default, @ViewChild queries are resolved after the view initialization
+ (i.e., after ngAfterViewInit). If you need the reference before that, set the static option to true.
+ @ViewChild('myInput', { static: true }) myInput!: ElementRef;
+
+
+@ViewChildren - can access nultiple child components or DOM elements in parent component
+@ViewChildren is a decorator that allows you to query multiple child elements, components, or directives from a parent component.
+ This is useful when you want to interact with a list of child components or DOM elements dynamically and perform operations on them.
+
+
+parent.component.ts
+    @Component({
+    selector: 'app-parent',
+    template: `
+        <app-child></app-child>
+        <app-child></app-child>
+        <app-child></app-child>
+        <button (click)="callChildMethods()">Call Child Methods</button>
+
+        //template reference variable
+        <div #box class="box">Box 1</div>
+        <div #box class="box">Box 2</div>
+        <div #box class="box">Box 3</div>
+        <button (click)="highlightBoxes()">Highlight Boxes</button>
+    `
+    })
+    export class ParentComponent implements AfterViewInit {
+        @ViewChildren(ChildComponent) children!: QueryList<ChildComponent>;
+        @ViewChildren('box') boxes!: QueryList<ElementRef>;
+
+        ngAfterViewInit() {
+            // Accessing the child components after view initialization
+            console.log(this.children);
+        }
+
+        callChildMethods() {
+            // Loop through each child component and call its method
+            this.children.forEach((child) => child.logMessage());
+        }
+
+        highlightBoxes() {
+            this.boxes.forEach((box) => {
+            box.nativeElement.style.backgroundColor = 'yellow';
+            });
+        }
+    }
+child.Component.ts
+
+    @Component({
+    selector: 'app-child',
+    template: `<p>Child component</p>`
+    })
+    export class ChildComponent {
+        logMessage() {
+            console.log('Child component method called!');
+        }
+    }
+
+* @ViewChildren(AlertComponent, { read: ElementRef }) alerts: QueryList<ElementRef>
+  @ViewChildren(AlertComponent, { read: ViewContainerRef }) alerts: QueryList<ViewContainerRef>
+  
+  In Angular, when using @ViewChild (or @ViewChildren), the read option allows you to specify what type of reference you want to
+   retrieve from the queried child elements.
+   
+  By default, Angular will return the instance of the component or directive that matches the query.
+   However, with the read option, you can choose to retrieve a different type of reference, such as an ElementRef (for access to the DOM element)
+   or a ViewContainerRef (for managing dynamic views).
+
+  read: ElementRef: Used to get a reference to the underlying DOM element associated with a component.
+  read: ViewContainerRef: Used to get a reference to the ViewContainerRef, which can be used to add, remove, or manipulate views dynamically or create components dynamically
+  The read option allows you to query for a different reference than the default (component instance), which can be useful for various operations like DOM manipulation or dynamic component creation.
