@@ -1,0 +1,8 @@
+Common Decorators:
+
+@Component: Defines a component.
+@Directive: Defines a directive.
+@Pipe: Defines a pipe.
+@Injectable: Defines a service that can be injected.
+@Input: Marks a property as an input property.
+@Output: Marks a property as an output property.

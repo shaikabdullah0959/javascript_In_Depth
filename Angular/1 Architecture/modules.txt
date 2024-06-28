@@ -1,0 +1,39 @@
+Modules: NgModule, declarations, imports, providers, bootstrapping.
+
+What is an NgModule?
+
+Imagine your Angular app is like a house. To build this house, you need different rooms (components), furniture (directives and pipes), and utilities (services). An NgModule is like a blueprint that organizes these different parts.
+
+Why do we need it?
+
+Organization: It keeps your code organized by grouping related components, directives, and pipes.
+Dependency Management: It helps Angular know what parts of the app need each other.
+Bootstrapping: It tells Angular which component to load first when the app starts.
+
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent } from './app.component';
+
+    @NgModule({
+    declarations: [
+        AppComponent // Declaring the main component
+        MyComponent, // Declaring a component
+        MyDirective, // Declaring a directive
+        MyPipe       // Declaring a pipe
+    ],
+    imports: [
+        BrowserModule // Importing necessary modules
+        CommonModule, // Importing Angular's CommonModule
+        FormsModule   // Importing FormsModule for template-driven forms
+    ],
+    providers: [],
+    bootstrap: [AppComponent] // Bootstrapping the main component
+    })
+    export class AppModule { }
+
+Key Sections:
+
+declarations: List of components, directives, and pipes that belong to this module.
+imports: Other modules that this module depends on.
+providers: Services that this module needs.
+bootstrap: The main component that starts the app.

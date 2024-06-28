@@ -1,6 +1,6 @@
 Mutual fund/Stock Market
 
-Invest in Equity mutual funds
+Invest in Equity mutual funds 
 
 Plan - Direct vs regular -> Direct has higher returns
 
@@ -33,11 +33,11 @@ Owner’s equity means owner’s ownership.
 Owner’s equity is also known as Net Equity
  Net Equity = Total assets - borrowings
 
-Stock/Share
+Stock/Share 
 
 Primary Market/Secondary Market
 
-The primary market in the share market is where new securities/shares are created and sold for the first time. It is also known as the new issue market.
+The primary market in the share market is where new securities/shares are created and sold for the first time. It is also known as the new issue market. 
 Initial Public Offering (IPO): The most common form of a primary market transaction. When a company decides to go public and offer its shares to the public for the first time, it conducts an IPO. Investors buy these new shares directly from the company and fund goes to the company
 
 The secondary market is where previously issued securities such as stocks, bonds, and other financial instruments are bought and sold among investors. Unlike the primary market, where securities/shares are sold directly by the issuer(Business/company), the secondary market involves transactions between investors
@@ -68,7 +68,7 @@ Company having 4 partners earned 100 rs in a year. Each partner’s profit is 25
 EPS  = Net profit/ no of shares
 
 
-P/E = price of the share/EPS
+P/E = price of the share/EPS 
 
 
         Lower PE -> Lower is the stock price,  Lower PE -> might be bcoz of slow growth or -ve growth or future prospects are not great
@@ -76,7 +76,7 @@ P/E = price of the share/EPS
 
 P/E  has to be compared with peers or industry avg…
 
-Indiainfoonline.com for peer comparison
+Indiainfoonline.com for peer comparison 
 
 Market cap -> No of shares * price of one share
 Enterprise value  -> Actual value of the company (Lesson 3)
@@ -117,9 +117,9 @@ ROE =  Net profit/share holders equity * 100.  (Equity means money)
             Net profit = 100rs
 	    share holders equity = 500rs
              ROE = 100/500 * 100  = 20 %
-ROE should be good
+ROE should be good 
 
-Debt Equity should be almost Zero
+Debt Equity should be almost Zero 
 
 ROE should be good even if PAT Margin is less and Debt Equity is almost 0
 
@@ -139,14 +139,14 @@ Profit after tax - bottom line
        Split into 5 shares
 
 Moneycontrol.in
-Under corporate actions we can see share split/ bonus share information
+Under corporate actions we can see share split/ bonus share information 
 
 
 6Hours
 Upper circuit/Lower Circuit - SEBI sets upper circuit or lower circuit for companies. It can be 2%, 5%, 10%, 20%,40%
 For example -> A stock price can increase maximum by 20% or fall by max 20% in a single day based on the Last traded price of previous day
 
-NSE has shares, future & options(derivatives), debentures - Many companies provides all of these or few of these.
+NSE has shares, future & options(derivatives), debentures - Many companies provides all of these or few of these. 
 
 A company who provides future & options can increase/fall by more than 20%
 
@@ -164,15 +164,15 @@ Stop loss limit order
 
 BSE- SENSEX INDEX     			NSE - NIFTY INDEX
 
-SENSEX INDEX,  NIFTY INDEX are representatives of  stock market performance
+SENSEX INDEX,  NIFTY INDEX are representatives of  stock market performance   
 
- NIFTY INDEX is based on top 50 companies
-SENSEX INDEX is based on top 30 companies
+ NIFTY INDEX is based on top 50 companies 
+SENSEX INDEX is based on top 30 companies 
 
-In 2001 a base value was set as 100 for market capitalisation
+In 2001 a base value was set as 100 for market capitalisation 
 For example company A share price is 500 and no of share holders is 1000 then  market capitalisation  is 500 * 1000 = 5 Lakh
 Now we say Sensex is represented as 100 for 5 lakh
-If company A share price increases the MC market capitalisation increases hence Sensex base value also increases
+If company A share price increases the MC market capitalisation increases hence Sensex base value also increases 
 
 
 * Promoter selling shares can be bcoz of two reasons 1. He needs money 2. Want to comply with SEBI. SEBI rule is promoter can have max 75% of the shares.
@@ -196,7 +196,7 @@ Moneycontrol
 Screener
 Trading view
 
-Rules to follow
+Rules to follow 
 1. Never buy a stock of company listed only in BSE
 
 
@@ -206,8 +206,8 @@ Then 1 cr is book value and current price is 2cr
 In share market terms 2cr is current share price and actual share price is 1 cr also known as book value
 
 
-Large cap.       Mid cap.     Small cap
-Top 100.           101-250.    251-500 companies based on market	capitalisation
+Large cap.       Mid cap.     Small cap 
+Top 100.           101-250.    251-500 companies based on market	capitalisation 
 
 
 FV - Face value
@@ -238,7 +238,7 @@ Return on the share holders equity/money
 ROE will be good if ROCE is good i.e, if company performs then only return will be good
 ROE > 20% is considered good
 
-Debt to Equity
+Debt to Equity 
 ( Debt means loan amount)  and equity - is amount of all share holders + amount of company reserves
 
 D/E should always be less.
@@ -264,7 +264,7 @@ current price  book value
 How to read profit and loss 9:24 mins in 12 hrs video
 How to read balance sheet  9:37 mins (other liabilities should not be more)
 
-Cash flows
+Cash flows 
 Cash from operating activities should increase and it’s a good sign
 
 Shareholding pattern 9:48min
@@ -282,12 +282,12 @@ Green candle is +ve and red candle is -ve
 Green candle terms ->  lowest -> opening price -> closing price -> highest. (Bottom to top)
 
 Green candle terms ->  highest -> opening price -> closing price -> lowest (top to Bottom)
-
+   
 
 Company List
 S40.		         S40NXT.      				S250
 Large cap		Small/Mid cap			small/mid/large cap
-Debt free								Roce >15%
+Debt free								Roce >15%	
 Brand value high							D/E < 50%
 Market leaders							Net profit > 100cr
 Roce >15%
@@ -328,7 +328,7 @@ ZERODHA ACCOUNT
 
 Strategy Name: BBS (Bollinger Bands + PIOTROSKI SCAN Strategy) - APPLICABLE IN S250+ COMPANIES
 LEARN ABOUT STANDARD DEVIATION FOR THIS STRATEGY
-Short Term Strategy - You Can Stay Invested Anywhere Between 1 Trading to 10 Trading Days.
+Short Term Strategy - You Can Stay Invested Anywhere Between 1 Trading to 10 Trading Days. - See daily chart I.e, 1D to check BB is applicable or not
 Profit Potential - Nearly 4% upto 10%.
 Rules:
 * Don't be greedy when the stock is going up.
@@ -387,6 +387,22 @@ Also, After buying the stock if the price falls by 4% the sell it by adding stop
         If graph is below 30, it means it’s over sold
         If graph is above 70, it means it’s over bought
         If graph is below 30 or above 70 we will not buy the stock
+   
+SIMPLE  Moving Average Strategy (MAS) - Simple Moving + Compounded Moving Average used for s50, s250nxt - See weekly chart for long term investment
+Add Indicators - > 
+1. Rob Booker Knoxville divergence with settings Bars black 150, RSI Period 10, Momentum period 10
+2. relative strength index indicator  with the settings used in BB strategy
+3. Simple moving averages (50, 100, 200) by cinematography with settings (refer screenshot) and add colours black, red, green in style tab
+
+ BRG Buy - black red green buyWhen to buy the stock in MAS strategy
+   1. Lines should be in the order Black red green  from top and below green line there should be candles
+2. There should be downward trend with slopy red line
+3.  At the same time  check RSI is between 30 and 70
+  If three conditions are met buy the stock
+
+When to sell the stock in MAS strategy
+If the line are in the order Black, red, green from bottom and candles should be above green line then it’s time to sell. And rsi should be above 70 
+
 
 
 
@@ -399,9 +415,12 @@ CLASS 4 - https://youtu.be/UXH1qMVUMN4
 CLASS 5 - https://youtu.be/P1Za8ulPVLQ.  - bank stocks and filtering of dividend stocks
 CLASS 6 - https://youtu.be/k71g79Aqqas - filter top companies in each sector to make s50 list
 CLASS 7 - https://youtu.be/r3QhiCh4LAI - filter top companies in each sector to make s50 list
-CLASS 8 - https://youtu.be/CNZv9MdXtZg -  Bollinger Bands strategy + relative strength index indicator
-CLASS 9 -https://www.youtube.com/watch?v=V1z2Sm477S8
-CLASS 10- https://www.youtube.com/watch?v=VEa1jRDV06k -  Moving Average Strategy EXPLAINED
+CLASS 8 - https://youtu.be/CNZv9MdXtZg -  Bollinger Bands strategy + relative strength index indicator 
+CLASS 9 -https://www.youtube.com/watch?v=V1z2Sm477S8 - Moving Average Strategy EXPLAINED starting at 20Min
+CLASS 10- https://www.youtube.com/watch?v=VEa1jRDV06k -  Instructions for market trading.
+CLASS 11 - https://www.youtube.com/watch?v=b3r9wcUDISw  - support n resistance 
+CLASS 12 - https://www.youtube.com/watch?v=AwCL4EWBYno
+
 
 
 
@@ -411,11 +430,11 @@ Q2 -> when we invest for long term then don’t we sell it and buy it based on s
 
 NSEINDIA website gives correct information about NIFTY
 
-SGXNIFTY
+SGXNIFTY 
 
 S50 List
 How to make S50 list
-1. Select a sector, click on edit columns, enable Market Capitalization, Sales latest quarter, YOY Quarterly sales growth,  YOY Quarterly profit growth, Price to Earning, Dividend yield, Return on capital employed, Average return on equity 3Years, Pledged percentage, Industry PE, Price to book value
+1. Select a sector, click on edit columns, enable Market capitalization, Sales latest quarter, YOY Quarterly sales growth,  YOY Quarterly profit growth, Price to Earning, Dividend yield, Return on capital employed, Average return on equity 3Years, Pledged percentage, Industry PE, Price to book value
 2. Download the list from screen based on above filters
 3. From the list, remove the companies which has Pledged percentage, remove the companies which are not listed in both NSE and BSE
 4. Remove companies whose Debt to equity is more than 15% I.e > 0.15
@@ -426,10 +445,33 @@ How to make S50 list
 9. After all above filters if there are multiple companies left then remove companies whose market capitalisation is less than 5% of the top company
 
 
-SIMPLE  Moving Average Strategy (MAS) - Simple Moving + Compounded Moving Average used for s50, s250nxt
-Add Indicators - >
-1. Rob Booker Knoxville divergence with settings Bars black 150, RSI Period 10, Momentum period 10
-3. relative strength index indicator  with the settings used in BB strategy
-4. Simple moving averages (50, 100, 200) by cinematography with settings (refer screenshot) and add colours green, red, black in style tab
+Stock purchasing rule
+    * Avoid buying in the first hour of the market due to volatility.
+    * Invest after 11 AM.
+* Portfolio Management:
+    * Limit the number of companies in your portfolio to 15-20.
+* Due Diligence:
+    * Before buying, ensure there's no negative news about the company.
+    * Check the RSI (Relative Strength Index) before buying from BBS (presumably a brokerage or platform).
+Fund Management Strategies
+* Unicorn: SMA + RSI + Knoxville - Long-term strategies with potential results in 3-4 months.
+* BBS: BBS + Piotroski Scan - Short-term strategies with potential results in 1 day to 10 trading days.
+* HDY: High Dividend Yield Strategy
+* UP20: Strategy (details to be provided next week) - wing trading strategy with potential results in 1-1.5 months.
+* Trading Patterns: - Short-term strategies with potential results in 1 day to 10 trading days.
+    * Cup and Handle pattern, BTST (Buy Today Sell Tomorrow)
+* Fund Allocation:
+        * The total allocated fund for stocks should be divided in the ratio of 3:2:1:2:1.
+        * Example:
+            * For a total fund of ₹90,000:
+                * ₹30,000 + ₹20,000 + ₹10,000 + ₹20,000 + ₹10,000
+* Zerodha: Recommended for long-term strategy investments. Daily checks are not required.
+* Upstox: Recommended for short-term and swing trading. Daily checks are necessary.
+    * Task:
+    * Create at least 250+ watchlists in your Upstox account.
+    * Create S50 and S50NXT watchlists in your Zerodha account.
 
-     BRG Buy - black red green buy
+
+
+
+https://www.youtube.com/watch?v=gVT9jzgOAss - MULTI BAGGER STOCKS USING ALPHA AND BETA

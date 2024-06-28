@@ -1,0 +1,39 @@
+What are Route Guards?
+
+Route Guards in Angular are like security guards that control access to certain routes.
+They decide whether a user can navigate to a particular route or not.
+
+Types of Route Guards:
+
+CanActivate: Checks if a route can be activated.
+CanDeactivate: Checks if a route can be deactivated.
+Resolve: Pre-fetches data before activating a route.
+
+CanActivate:
+
+    import { Injectable } from '@angular/core';
+    import { CanActivate } from '@angular/router';
+
+    @Injectable({
+    providedIn: 'root'
+    })
+    export class AuthGuard implements CanActivate {
+    canActivate(): boolean {
+        return true; // or some logic to check authentication
+    }
+    }
+
+CanDeactivate:
+
+    import { Injectable } from '@angular/core';
+    import { CanDeactivate } from '@angular/router';
+    import { MyComponent } from './my-component.component';
+
+    @Injectable({
+    providedIn: 'root'
+    })
+    export class CanDeactivateGuard implements CanDeactivate<MyComponent> {
+    canDeactivate(component: MyComponent): boolean {
+        return component.canDeactivate(); // or some logic to check deactivation
+    }
+    }

@@ -1,0 +1,64 @@
+Routing
+<!--
+   0. In traditional applications built with Server Side Routing when you change the URL in your browser, the browser makes a request to 
+   the server to return some HTML which it will display.
+   
+   1. Client Side Routing.
+   When we first navigate to a new site the server returns the html, javascript and css needed to render that page. All further changes to the
+   URL are handled  locally by the client application. Typically the client application will make one or more API requests to get the information 
+   it needs to show the new page.
+
+   2. Angular has a couple of modules which let us implement our application as an SPA, the concept as a whole in Angular is 
+      called the Component Router.
+
+      import {Routes, RouterModule} from "@angular/router";
+
+   3. Mapping of URLs to Components is done via something called a Route Configuration.
+      const routes: Routes = [
+            { path: '', component: HomeComponent, pathMatch: 'full' },
+            { path: 'blog/:id', component: BlogComponent } //parameterised route
+            { path: 'search', component: SearchComponent }
+      ];
+      Routes is a typescript type of Route[], an array of individual Route instances.
+      For the special case of an empty URL we also need to add the pathMatch: 'full' property so Angular knows it should be matching exactly 
+      the empty string and not partially the empty string.
+   4. In Angular we can navigate to an URL in two ways.
+      1. routerLink directive in HTML
+      2. we can also programmatically navigate via a Router service we inject into our component, like so: this.router.navigate(['search']); //links params array
+   5. Non-parameterised routes take precedence over parameterised routes.
+   6. To read an Id in a component we use ActivatedRoute
+      this.route.params.subscribe( params => console.log(params) );
+      this.router.navigate(['search', {term: 'abc'}]); //optional params ({term:'abc'}); Url for optional params will be like /search;term=abc
+   7. Child Routing
+      https://angular-2-training-book.rangle.io/handout/routing/child_routes.html
+   8. Router Guards.
+      canActivate - checks whether to navigate to a particular page
+      canActivateChild - checks whether to navigate to a particular child page
+      canDectivate - confirms whether to save changes and navigate to a new page or discard changes.  
+      
+----------------------------------------------------------------------------------------------------------------
+0. Router Module is required to make routed angular application.
+1. Angular router service enables navigation from one view to other.
+2. It is in its own library package, @angular/router
+3. RouterModule   A separate NgModule that provides the necessary service providers and directives for navigating through application views.
+4. A routed Angular application has one singleton instance of the Router service.When the browser's URL changes, that router looks for a 
+   corresponding Route from which it can determine the component to display.
+5. In  RouterModule.forRoot(appRoutes) the reference of configured routes are given.
+6. The order of the routes in the configuration matters and this is by design. The router uses a first-match wins strategy when matching routes, 
+   so more specific routes should be placed above less specific routes.
+7. The RouterOutlet is a directive from the router library that is used like a component.Component templates(HTML) are rendered at routerOutlet.
+8. Navigation happens in 3 ways
+   1. During start of application the routes are configured to navigate to a particular component.
+   2. As a result of some user action such as the click of an anchor tag.
+      <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>.  routerLink is a directive and triggers navigation.
+9. Router state
+   
+   a. After the end of each successful navigation lifecycle, the router builds a tree of ActivatedRoute objects that make up the 
+   current state of the router. You can access the current RouterState from anywhere in the application using the Router service and 
+   the routerState property. Each ActivatedRoute in the RouterState provides methods to traverse up and down the route tree to get information 
+   from parent, child and sibling routes.
+   b. The route path and parameters are available through an injected router service called the ActivatedRoute.
+   c. ActivatedRoute contains route specific information such as route parameters, static data, resolve data, global query params, and the global fragment.
+   
+
+-->
