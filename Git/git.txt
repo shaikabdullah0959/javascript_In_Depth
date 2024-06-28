@@ -1,0 +1,61 @@
+fatal: Need to specify how to reconcile divergent branches.
+
+ git pull --rebase
+
+Rebase branch with  master
+
+git checkout master
+git pull 
+git checkout your_branch
+git rebase master
+git add filename1 filename2 // if there are conflicts
+git rebase --continue // After conflicts are resolved
+git push origin your_branch --force
+
+
+* Ensure your branch is up-to-date:git fetch origin  git pull origin master 
+* Switch to your branch:git checkout your_branch 
+* Rebase onto the master branch:git rebase master This command applies your changes on top of the latest changes in the master branch.	
+* Resolve conflicts:    If conflicts occur, Git will pause the rebase process and notify you about the conflicts. You need to resolve them manually.
+    * Open the files with conflicts and resolve the conflicts. Git marks the conflicting sections in the file.
+    * After resolving conflicts, stage the changes:git add filename1 filename2 
+    * Continue the rebase:git rebase --continue If you have more conflicts, Git will stop again. Repeat the conflict resolution process until there are no more conflicts.
+* Continue or abort the rebase: If there are no conflicts or after resolving all conflicts, the rebase will complete. However, if you encounter issues during the process, you might want to abort the rebase:git rebase --abort 
+* Push the changes:Once the rebase is complete, force-push the changes to your branch on the remote repository:git push origin your_branch --force Be cautious with force-push, as it rewrites history. Make sure it's appropriate for your collaboration environment.
+
+
+
+Update the new commit without adding new commit message
+
+git add .
+git commit --amend --no-edit
+git push -f
+
+Create branch in local
+
+
+Simply put, to create a new local branch, do:
+git branch <branch-name>
+To push it to the remote repository, do:
+git push -u origin <branch-name>
+
+
+Git revert latest commit from remote branch
+git reset HEAD^
+git push origin +HEAD
+
+
+Squash commits
+1. git rebase -i HEAD~3 (HEAD~3 -- no of commits to squash)
+2. type "i"
+3. replace "pick" with "squash" in the commits
+4. esc:wq
+5. Comment extra commit messages
+6. esc:wq
+7. message will display successfully rebased
+8. git push -f
+
+
+Rename the remote branch 
+git push origin :<old-branch-name> <new-branch-name>
+git branch -m <old-branch-name> <new-branch-name>

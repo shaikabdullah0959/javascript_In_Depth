@@ -1,0 +1,37 @@
+Event bubbling and event capturing are two phases of event propagation in the DOM in web development.
+They define how events flow through the elements in the DOM tree.
+
+Event Bubbling
+Event bubbling is the phase where an event starts at the target element and then bubbles
+ up to the root of the document
+
+Event Capturing
+Event capturing (or event trickling) is the opposite of event bubbling. In this phase, the event starts from the root and trickles down to the target element.
+
+<div id="parent">
+    <button id="child">Click me</button>
+</div>
+
+const parent = document.getElementById('parent');
+const child = document.getElementById('child');
+
+parent.addEventListener('click', () => {
+    console.log('Parent clicked!');
+}, false); // false for bubbling
+
+child.addEventListener('click', () => {
+    console.log('Child clicked!');
+}, false); // false for bubbling
+
+parent.addEventListener('click', () => {
+    console.log('Parent clicked!');
+}, true); // true for capturing
+
+child.addEventListener('click', () => {
+    console.log('Child clicked!');
+}, true); // true for capturing
+
+Order of Events
+Capturing Phase: Parent capturing -> Child capturing
+Target Phase: Child target
+Bubbling Phase: Child bubbling -> Parent bubbling

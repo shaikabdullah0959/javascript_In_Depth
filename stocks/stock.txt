@@ -1,0 +1,108 @@
+Stock
+
+Sharia complaint stocks
+Islamicly.com
+musaffa
+Screener.in -> to identify whether to buy a stock or not
+
+https://www.ansaar.in - to identify whether a stock is halal or not  creds ->. Gmail/A..99@@@@@
+
+Mutual fund/Stock Market
+
+Invest in Equity mutual funds 
+
+Plan - Direct vs regular -> Direct has higher returns
+
+Direct plans offer higher returns due to a lower expense ratio than regular funds. You get the benefit from the exclusion of distributor commissions, which leads to higher returns. Unlike direct plans, regular plans have a higher expense ratio, which eats out your return and offers slightly lower returns.
+
+
+Option Growth vs IDCW Reinvest vs IDCW Payout
+                                IDCW: Income Distribution cum Capital Withdrawal (previously called Dividend)
+
+Which is better Mutual Fund ->  growth or IDCW reinvestment?
+
+
+Growth Plan
+
+Usually higher than the IDCW plan as it focuses on long-term wealth creation. Dividend income is taxable as per the individual's income tax slab rate. Short-term capital gains or long-term capital gains are applicable depending on the holding period of investment.
+
+
+
+Stock Market
+https://www.youtube.com/watch?v=lqk2LppTl84
+How to pick a stock - screener.in
+1.  Company should be from Market leaders
+2. Good free cash flow
+3. ROE - return on Equity should be minimum 15%
+4. Then check fundamental analysis, evaluation  and technical analysis
+
+
+
+https://ticker.finology.in/company/RELIANCE
+
+
+EPS - Earning per share
+
+Company having 4 partners earned 100 rs in a year. Each partner’s profit is 25 rs. Here 25 is EPS…
+
+EPS  = Net profit/ no of shares
+
+
+P/E = price of the share/EPS 
+
+
+        Lower PE -> Lower is the stock price,  Lower PE -> might be bcoz of slow growth or -ve growth or future prospects are not great
+       Higher PE -> Higher is the stock price,  Higher PE ->  might be bcoz of high growth or greater future prospects
+
+P/E  has to be compared with peers or industry avg…
+
+Indiainfoonline.com for peer comparison 
+
+Market cap -> No of shares * price of one share
+Enterprise value  -> Actual value of the company (Lesson 3)
+Standalone  P&L(Profit and loss) -> Company’s earning by its business
+Consolidated P&L(Profit and loss) -> Company’s earning by its business and  the revenue earned by investing in other companies.
+
+P/B -> price of share/book value
+
+Book Value ->  if the shop is owned by two partners and they sell the shop for 100rs then each will get 50rs. Here 50rs is the book value per share…
+
+Book Value  =  price of the company while selling total no of shares.
+ *** While picking stocks P/B should be considered for companies who have assets like Tata steel( e.g -> machineries)  and should not be considered for companies like IT bcoz they don’t have assets
+
+Dividend Yield  -> part of the profit earned in a year by the company will be shared to the share holders. That amount is Dividend yield.
+                                 If Dividend yield is high then company is low growth company and share value of the company will not increase much
+
+Promoter Holding -> percentage of the shares owned the owner/s of the company. PH should be > 30% atleast
+                                      If PH > 30% then pledge % should be less. This is important point.
+    				       if pledge % is high -> this indicates promoter/owner has taken loan by giving the share % to the person who has given loan. Once the loan is returned shares will be owned  				       by the owner again. (Shares ko girvi rakha hain by taking loan by the owner…)
+LESSON 4
+
+PAT Margin/Net Margin ->
+Profit After Tax(PAT)
+
+Example -> cost of pen = 10rs
+                     Selling price of pen =. 20rs
+                     Profit = 10rs
+                     Expenses for selling pen = 5rs
+                     Net profit =. profit -  expenses = 10 - 5 = 5rs
+PAT margin (always calculated on selling price) = 5/20 * 100 = 25%
+PAT Margin/Net Margin is real profit
+
+ROE ( Return on Equity) -> Money earned by company based on share holder’s money
+
+ROE =  Net profit/share holders equity * 100.  (Equity means money)
+
+
+            Net profit = 100rs
+	    share holders equity = 500rs
+             ROE = 100/500 * 100  = 20 %
+ROE should be good 
+
+Debt Equity should be almost Zero 
+
+ROE should be good even if PAT Margin is less and Debt Equity is almost 0
+
+IF ROE is good when debt equity is more then the stock might not be good…
+
+ROE > 20% is considered good

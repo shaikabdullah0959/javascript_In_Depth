@@ -1,0 +1,65 @@
+Java Naveen
+lsof -i :8080
+Kill PID
+
+
+https://learncodewithdurgesh.com/blogs/most-asked-java-interview-question
+
+Containers 
+- Are run time environments
+- Creates only one object to each class to improve performance
+- Without containers we can have spring features in the application
+- Browser is container for view layer,  web logic is container for business and dao layer
+- If we use spring mvc/spring boot IOC is the container. IOC will create objects for pojo classes
+- pojo stands for plain old java object class and it has only private members. To access private members we should use setters and getters.
+
+
+
+
+Session -17
+Step 1
+1.  Manual object creation  class student  -> xml configuration <bean class=“student> => IOC ( reads xml file and creates objects of the classes mentioned in xml)
+2. Manual object creation was solved using annotation likefor each class add respective annotation @controller,@seervice, @repository,@configuration => in xml file <context:component-scan basepackage=“com.x”> => IOC (reads xml file and then create instances automatically based on the annotation)* configuration for each class i.e, using bean tag is avoided in xml using annotations* @component annotation is the parent annotation of other annotationsStep 2
+	There are two ways of DI         There are two classes EmployeeController and  EmployeeService. EmployeeService is added as dependency in EmployeeController
+	1. There is a dependency in a class  EmployeeController- > EmployeeService empService;   	     DI is done	Using setters/constructors and configuration in xml file using property tag ( values for the variables in class will be provided from property tag) 		<bean id=“s” class=“EmployeeService”>
+               <bean id=“x” class=“EmployeeController”>
+                  <property name=“empService” ref=“s”>
+               </bean>
+	    DI is nothing but providing the instance of particular class/service
+        2. @Autowired annotation 
+             @Autowired		EmployeeService empService; 
+              Here IOC will provide the instance when it sees @autowired annotation
+
+
+             For annotations to work we need some config in xml		<context:annotation-config>
+		<context:component-scan basepackage=“com.x”>
+
+Session 19
+  1. Whenever we want to have some configuration  in application we use @configuration annotation.
+       in the config file, we create instance of third party library class and return the instance.
+      when IOC does component scan it will read this config class and  IOC will register the third party class instance and the instance will be created only once.
+* Returning the instance of third party class is mandatory for it to use in some other classes.
+* Use @Bean annotation when we use create instance of third  party library class.
+
+
+This @Bean annotation is similar to <bean> tag in xml… @bean is used when we want to no longer use bean xml.
+
+@configuration
+Class AppConfig {
+   @Bean
+   Public class student {
+   	ThirdPartyClass tpc = new ThirdPartyClass();
+     	Return tpc;
+  }
+}
+
+Session 21
+To initialise something as soon as the class is instantiated, we can use @PostConstruct annotation. This will act as init method.
+
+Public class xyz {
+	connection db;
+      @PostConstruct()  // now the method will behave as init method
+     Public class abc {
+	    db = DM.getCon();
+       }
+}

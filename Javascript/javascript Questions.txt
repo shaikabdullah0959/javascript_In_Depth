@@ -1,0 +1,81 @@
+1. diff b/w let and var
+   a.  var has function scope and let has block scope. will die at end of block
+   b. var variables get hoisted but let variables don't.
+2. ===(compares value and datatype) & ==(compare value)
+3. diff b/w let and const
+   cannot reassign value in const but we can do it in let
+   let age= 25; then age = 26; no error
+   const age = 25 then age = 26 error
+4.undefined and null
+  var x; outputs undefined typeof(undefined) -> undefined
+  var x = null; we assign the null value to a variable typeof(null) -> object
+5. arrow functions?
+   let profile = {
+    firstName:'',
+    setFName: function(){
+                this.firstName = 'Shaik' // this refers to profile object in function
+             }
+   }
+   console.log("firstName",profile.firstName) -> shaik
+   console.log("firstName",window.firstName) -> undefined
+
+   Arrow function
+    let profile = {
+        firstName:'',
+        setFName: ()=>{
+                        this.firstName = 'Shaik' // this refers to window object in Arrow function
+                  }
+    }
+   console.log("firstName",profile.firstName) -> ''(empty)
+   console.log("firstName",window.firstName) -> shaik
+
+   function add(){
+	return this; // this refers to window object.
+    }
+6. prototypal inheritance?
+   All JavaScript objects inherit properties and methods from a prototype:
+   Date objects inherit from Date.prototype
+   Array objects inherit from Array.prototype
+   Person objects inherit from Person.prototype
+   The Object.prototype is on the top of the prototype inheritance chain
+   Date objects, Array objects, and Person objects inherit from Object.prototype
+   
+   The JavaScript prototype property allows you to add new properties/methods to object constructors:
+   let car = function(model){
+    this.model = model;
+   };
+   car.prototype.getModel = function(){
+    return this.model;
+   }
+   let toyota = new car('toyota');
+   console.log(toyota.getModel());
+
+	
+7. function declaration and function expression?
+   fn declaration is a function with name and function expression is annonymous function
+   1. function add(){ }, var add = function(){};-->annonymous
+   2. function declaration is hoisted and annonymous are not.
+   3.we can pass annoymous fn as a parameter to another function but not fn declaration.
+8. what is promise and y do we use it?
+9 setTimeout()
+10 what is closure and how do u use it?
+11 call apply bind
+   var pDetails = {
+    "firstName":"shaik",
+    "lastName:"Abdulllah"
+   }
+   var getFullName = function(){
+   console.log(this.firstName + this.lastName);
+}
+12 var x = this; refers to global object i.e, window object.
+13. how to improve JavaScript Performance?
+14. Object.freeze(object) // Prevents any changes to an object
+15. event loop in javascript
+16. 
+
+closure, promises, async await, call apply bind
+
+
+
+
+
