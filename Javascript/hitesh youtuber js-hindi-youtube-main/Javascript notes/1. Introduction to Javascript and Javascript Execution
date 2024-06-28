@@ -1,3 +1,7 @@
+JavaScript is a lightweight, interpreted programming language used to create dynamic web pages.
+It runs on the client-side and supports object-oriented, functional, and imperative programming styles.
+JavaScript allows interaction with HTML & CSS, event handling, and API integration.
+
 Understanding JavaScript Execution: The Core Fundamentals
 
  JavaScript code execution happens inside the execution context
@@ -45,6 +49,3 @@ call stack
 
 akshay saini youtube series of JavaScript
 https://www.youtube.com/watch?v=ZvbzSrg0afE&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=2
-
-
-

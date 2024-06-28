@@ -1,0 +1,113 @@
+An Observable is a core concept in RxJS (Reactive Extensions for JavaScript), representing a data stream
+that can emit multiple values over time. It allows for asynchronous operations and enables reactive programming by handling streams of data or events.
+
+Key Features of Observables
+
+    1. Producer of Data
+    Observables can produce a sequence of values over time, such as:
+        Events (e.g., mouse clicks)
+        HTTP requests
+        Timers or intervals
+        Data from arrays or promises
+        Asynchronous
+
+    2. Observables handle asynchronous operations seamlessly, making them ideal for dealing with real-time data streams.
+
+    3. Lazy Execution
+    Observables do not execute until they are subscribed to. This means they only start producing data when a consumer expresses interest.
+
+Observable Life Cycle
+
+    An observable goes through the following phases:
+
+    Creation
+    An observable is created using RxJS creation functions like of, from, interval, or fromEvent.
+
+    Subscription
+    A consumer subscribes to the observable to receive its emitted values.
+
+    Emissions
+    The observable emits values using one or more of the following:
+
+    next(value) – Sends data to subscribers.
+    error(err) – Notifies subscribers of an error and stops further emissions.
+    complete() – Signals that no more data will be emitted.
+
+    Unsubscription
+    The consumer can stop listening to the observable, effectively halting the stream of data.
+
+Creating and Subscribing to an Observable
+
+    import { Observable } from 'rxjs';
+
+    // Create an observable
+    const myObservable = new Observable(observer => {
+    observer.next('Hello');
+    observer.next('World');
+    observer.complete(); // Marks the end of emissions
+    });
+
+    // Subscribe to the observable
+    myObservable.subscribe({
+    next: value => console.log(value),    // Handles emitted values
+    error: err => console.error('Error:', err), // Handles errors
+    complete: () => console.log('Completed!')   // Handles completion
+    });
+
+    // Output:
+    // Hello
+    // World
+    // Completed!
+
+
+
+1. Reactive extensions for javascript - RxJS
+2. To use Observables in Angular application RxJS library is required.
+3. RxJS provides functions and operators to modify Observable and return a new Observable.
+functions are  -> of, from, Pipe, throwError, interval, merge
+operators are -> map, find, take, filter, concat, catchError
+
+4. RxJS Creation Functions
+   
+   from - Converts an array, promise, or iterable into an observable.
+
+   import { from } from 'rxjs';
+   const array = [1, 2, 3];
+   from(array).subscribe(value => console.log(value)); 
+   // Output: 1, 2, 3
+
+   of - Creates an observable from the given arguments.
+
+    of('Hello', 'RxJS', '!').subscribe(value => console.log(value));
+    // Output: Hello, RxJS, !
+
+    interval - Emits values at regular intervals.
+
+    interval(1000).subscribe(value => console.log(value));
+    // Output: 0, 1, 2, 3... every second
+    
+    pipe -  used to combine one or more operators
+
+    RxJS Operators
+
+   map - Transforms each value emitted by the source observable.
+
+    import { of } from 'rxjs';
+    import { map } from 'rxjs/operators';
+
+    of(1, 2, 3).pipe(map(value => value * 2))
+    .subscribe(value => console.log(value));
+    // Output: 2, 4, 6
+
+    take -Takes only the first N values from the observable.
+
+    interval(1000)
+    .pipe(take(3))
+    .subscribe(value => console.log(value));
+    // Output: 0, 1, 2
+
+    catchError - Handles errors and replaces the observable.
+
+    throwError('Error occurred!')
+    .pipe(catchError(error => of(`Caught: ${error}`)))
+    .subscribe(value => console.log(value));

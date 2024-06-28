@@ -1,0 +1,51 @@
+
+
+
+
+Object.create:
+
+    const functionsBundle = {
+    addMoney: function () {
+        this.accountBalance++;
+    },
+    fetchBalance: function () {
+        console.log('The balance is ' + this.accountBalance);
+    },
+    };
+
+    const account = Object.create(functionsBundle);
+    account.accountBalance = 100;
+
+    account.addMoney(); // Inherits addMoney from functionsBundle
+    account.fetchBalance();
+
+    Using Object.create(functionsBundle) lets you create an object that inherits the methods of functionsBundle and has its own context (this).
+
+    You would typically use Object.create() when:
+
+    You want an object to inherit methods from another object (as shown above).
+    You want to establish an inheritance chain without using classes (if you're not using ES6 classes).
+
+Object.setPrototypeOf():
+
+    class Animal {
+        speak() {
+            console.log("Animal speaks");
+        }
+    }
+
+    class Dog extends Animal {
+        bark() {
+            console.log("Dog barks");
+        }
+    }
+
+    Object.setPrototypeOf(dog, animal);
+
+    const dog = new Dog();
+    dog.speak();  // Animal speaks
+    dog.bark();   // Dog barks
+
+
+
+Object.setPrototypeOf() is used to change the prototype of an existing object, allowing it to inherit methods and properties from another object.

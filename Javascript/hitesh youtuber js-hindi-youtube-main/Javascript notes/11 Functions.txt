@@ -1,3 +1,10 @@
+Functions are reusable blocks of code:
+- Declared using `function` keyword: `function myFunc() {}`.
+- Arrow functions: `const myFunc = () => {}`.
+- Parameters and return values.
+- **Higher-order functions**: Functions that take other functions as arguments.
+- **Callback functions**: Functions passed as parameters to other functions.
+
 function statement / function declaration
     function greet(name) {
         return `Hello, ${name}!`;

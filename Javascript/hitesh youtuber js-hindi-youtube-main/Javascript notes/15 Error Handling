@@ -1,0 +1,4 @@
+Handling runtime errors to prevent application crashes:
+- `try...catch` for handling errors.
+- `throw` for custom errors.
+- `finally` executes regardless of errors.

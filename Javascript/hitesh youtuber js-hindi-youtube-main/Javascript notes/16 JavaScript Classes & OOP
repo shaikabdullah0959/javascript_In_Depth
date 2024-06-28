@@ -1,0 +1,4 @@
+Object-oriented programming (OOP) in JavaScript:
+- **Classes**: `class MyClass { constructor() {} }`.
+- **Inheritance**: `class Child extends Parent {}`.
+- **Encapsulation**: Using private fields (`#property`).

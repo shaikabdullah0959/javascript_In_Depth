@@ -36,7 +36,6 @@ then inner fn is moved to call stack, EC is created for inner fn.
   outer fn has completed its executing(doesn't exist in call stack)
 
 
-
 for (var i = 1; i <= 3; i++) { // for each iteration same i present in global scope is incremented
     setTimeout(function() {
         console.log(i);

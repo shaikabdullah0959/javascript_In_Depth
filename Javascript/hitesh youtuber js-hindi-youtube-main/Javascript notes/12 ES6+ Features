@@ -1,0 +1,7 @@
+Modern JavaScript features include:
+- `let` and `const` for block-scoped variables.
+- **Arrow functions**: `()=>{}`.
+- **Template literals**: ``Hello, ${name}``.
+- **Destructuring**: `const {name, age} = obj`.
+- **Spread/rest operators**: `[...arr]`, `{...obj}`.
+- **Modules**: `export` and `import`.

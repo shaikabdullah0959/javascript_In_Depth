@@ -1,0 +1,41 @@
+
+Garbage Collection (GC) and Memory Leaks in JavaScript
+
+Garbage Collection is responsible for freeing up memory occupied by objects that are no longer accessible.
+Modern JavaScript engines like V8 use mark-and-sweep algorithms to identify unused objects.
+
+Mark phase: The GC starts from a root (e.g., window or global scope) and "marks" all objects that can still be accessed.
+Sweep phase: It deallocates memory for objects that are not marked as accessible.
+
+
+let x  = {"name": "Shaik"}; 
+    x = null; // will be Garbage collected as x is no longer having reference to the object
+
+Memory leaks
+
+A memory leak occurs when a Javascript program holds onto references to objects that are no longer needed
+ preventing the garbage collector from freeing up memory.
+
+Common Causes:
+Global variables (unintentionally created).
+    Unintentionally creating variables in the global scope keeps them alive for the lifetime of the application.
+    function createLeak() {
+        leak = "This is a global variable"; // No 'let', 'const', or 'var' makes it global
+    }
+Uncleared timers (setInterval/setTimeout).
+    References to closures or objects in setInterval or setTimeout can prevent memory from being freed.
+    let obj = { name: "leak" };
+    setInterval(() => console.log(obj.name), 1000); // obj is never cleared
+
+Unremoved event listeners.
+    const btn = document.getElementById("btn");
+    function handleClick() { console.log("Clicked"); }
+    btn.addEventListener("click", handleClick);
+    // the listener still exists in memory
+
+Global variable
+a global variable is one that is declared outside of any function or simply without the var, let, or const keywords,
+ making it accessible from any part of the code, regardless of the scope.
+It's attached to the global object, which is window in a web browser or global in Node.js.
+Too many Global variables, pollutes the Global Execution Context which eventually leads to memory leaks and making things slower and slower until our browsers crash.
+The issue with Global Variables is that we can have variable collisions.

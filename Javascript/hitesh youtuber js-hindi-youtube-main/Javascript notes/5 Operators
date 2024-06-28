@@ -1,0 +1,5 @@
+- **Arithmetic Operators**: `+`, `-`, `*`, `/`, `%`, `**`.
+- **Comparison Operators**: `==`, `!=`, `===`, `!==`, `>`, `<`, `>=`, `<=`.
+- **Logical Operators**: `&&`, `||`, `!`.
+- **Assignment Operators**: `=`, `+=`, `-=`, `*=`, `/=`.
+- **Bitwise Operators**: `&`, `|`, `^`, `~`, `<<`, `>>`.

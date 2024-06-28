@@ -1,3 +1,10 @@
+Managing asynchronous code execution:
+- **Callbacks**: Functions passed as arguments to other functions.
+- **Promises**: `fetch(url).then().catch()`.
+- **Async/Await**: `async function fetchData() { await fetch(url); }`.
+- **setTimeout() & setInterval()**: Execute code after a delay.
+
+
 Asynchronous  programming 
  - is a programming paradigm that facilitates non-blocking operations,
  - allowing a program to perform tasks concurrently without waiting for each task to complete before moving on to the next one.

@@ -1,0 +1,19 @@
+What is the Component Lifecycle?
+
+The component lifecycle in Angular is like the stages of a plant growing: from planting the seed to its full growth.
+ It consists of different phases that a component goes through from creation to destruction.
+
+ Lifecycle hooks -> Angular offers Lifecycle hooks that provide visibility into key life moments of the component
+                    and the ability to act when it occurs
+
+  Basic Phases:
+    
+    ngOnChanges: Called when an input property changes.
+    ngOnInit: Called after the component is initialized. (Called after ngOnChanges)
+    ngDoCheck: Called during every change detection run immediately after ngOnChanges and ngOnInit
+               Detect and act upon the changes Angular can't or won't detect on its own.
+    ngAfterContentInit: Called after content is projected into the component view. (Called after first ngDoCheck)
+    ngAfterContentChecked: Called after every check of projected content.
+    ngAfterViewInit: Called after Angular intializes the component view & child views.
+    ngAfterViewChecked: Called after Angular checks the component view & child views.
+    ngOnDestroy: Called before the component is destroyed.

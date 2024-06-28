@@ -12,7 +12,7 @@ There are three kinds of directives in Angular:
       2. it is used along with structural directives like *ngIf, *ngFor, *ngSwitch.
       3. only the content inside ng-template element will be added to the dom. ng-template will not be added
          to the dom.
-      e.g;l
+      e.g;
       <div *ngIf="true">Hello</div> is converted internally as
       <ng-template [ngIf]="true">
         <div>Hello</div>

@@ -41,3 +41,62 @@ Explain the Angular lifecycle hooks and their uses.
 How does Angular's change detection mechanism work?
 What are route guards, and how are they implemented?
 How do you handle HTTP errors in Angular applications?
+
+-------
+Javascript Angular
+
+Propeers
+OOPS, event loop, debounce, prototype inheritance, polypill
+
+Technical suneja - Interview preparation videos YouTube playlist
+Akshay saini - namaste javascript
+https://www.youtube.com/playlist?list=PLmcRO0ZwQv4QMslGJQg7N8AzaHkC5pJ4t
+
+Problems faced in javascript and how you overcame it
+
+
+https://www.youtube.com/watch?v=ecZjJPBkgSs - TOPICS to crack Frontend Developer Interview! 🤯 | javascript interview questions and answers
+https://www.youtube.com/watch?v=tOo9c6SK_do  -  Top 10 JavaScript Interview Questions EXPLAINED! E.g, event loop setTimeout, promise.resolve both works based on event loop
+
+Topics to prepare for front end job image in Abdullah folder
+How to improve page performance
+How html parsing works
+Caching in front end
+
+https://javascript.info/
+interview questions
+* Things covered:
+    * Javascript
+    * HTML & CSS
+    * Unit testing
+    * Design patterns
+    * Machine coding round
+    * Framework level  questions (**)
+
+* Topics
+    * Promises
+        * Promise.All, Promise.AllSettled.
+        * Promise chaining
+        * Where can you use await keyword
+        * Promises with SetTimeouts.
+    * Closures & scopes
+        * Outputs of code snippet
+        * Focussing on which scope will be used in different use cases.
+        * Trying to access a variable and analyzing the output.
+    * Polyfills
+        * Promise AllSettled
+        * bind(), apply()
+    * Caching
+        * Ways to improve your page performance, caching images, css files etc.
+    * Web performance (layouting, painting)
+        * Image optimisations
+        * HTML parsing (e2e)
+        * Loading javascript, considering the entire page load time.
+    * Event loop
+        * Working of an event loop, for example, taking some code snippet and dry running it.
+        * How does an event loop resolve the priority among multiple things available to be put on the JS callstack?
+    * Prototypes
+        * Prototype chaining
+        * Mocking inheritance in javascript
+    * Debugging techniques
+    * HTML layouting and css techniques

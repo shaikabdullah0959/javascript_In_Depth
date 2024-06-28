@@ -1,0 +1,4 @@
+Understanding JavaScript's execution model:
+- **Call stack**: Handles synchronous tasks.
+- **Event loop**: Manages asynchronous operations.
+- **Web APIs**: Process async tasks in the background.

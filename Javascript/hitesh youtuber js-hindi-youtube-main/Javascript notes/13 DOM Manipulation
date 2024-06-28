@@ -1,0 +1,4 @@
+DOM (Document Object Model) manipulation allows modifying HTML and CSS dynamically.
+- Select elements: `document.getElementById()`, `querySelector()`.
+- Modify elements: `innerHTML`, `textContent`, `setAttribute()`.
+- Handle events: `addEventListener('click', callback)`.

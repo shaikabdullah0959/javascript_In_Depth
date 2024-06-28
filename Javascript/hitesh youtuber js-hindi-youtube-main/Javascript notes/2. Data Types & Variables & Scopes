@@ -1,8 +1,10 @@
-Data types
-Two types of data types
-
-1.Primitive 
-  Number, string, boolean, null, undefined, symbol
+JavaScript has two types of data:
+- Primitive types: `string`, `number`, `boolean`, `null`, `undefined`, `BigInt`, `Symbol`.
+- Non-primitive types: `Object`, `Array`, `Function`.
+- Variables can be declared using: var/let/const
+  - `var` (function-scoped, hoisting applies).
+  - `let` (block-scoped, no hoisting issues).
+  - `const` (block-scoped, cannot be reassigned).
 
   const sym = Symbol("key");
   const obj = {
@@ -10,15 +12,16 @@ Two types of data types
       [sym]: "sss"
   };
 
+  const symbol1 = Symbol("test");
+  const symbol2 = Symbol("test");
+
+  console.log(symbol1 === symbol2); // false
+  console.log(symbol1 == symbol2);  // false
+
   console.log(obj[sym]); // "sss"
   console.log(Object.keys(obj)); // ['name'] sym keys are ignored
   // symbols are unique
 
-
-2. Non Primitive data types
-   array, object, regexp
-/*
-Variables can be declared using var/let/const
  - var vs let vs const
 
     | Feature          | `var`                               | `let`                                   | `const`                                    |
@@ -73,6 +76,7 @@ Block
             var x = 10;
             var y = 20;   // multiple statements
            } 
+           
 Block scope
 - The block scope refers to the variables and functions that can be accessed within the block  {}.
 

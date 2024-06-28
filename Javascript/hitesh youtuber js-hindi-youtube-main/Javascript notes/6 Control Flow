@@ -1,0 +1,7 @@
+Control flow statements help determine the execution flow in a program:
+- **Conditional statements**: `if`, `else if`, `else`, `switch`.
+- **Loops**:
+  - `for` - runs a block of code a specified number of times.
+  - `while` - runs while a condition is true.
+  - `do...while` - executes at least once before checking the condition.
+  - `forEach` - iterates over arrays.

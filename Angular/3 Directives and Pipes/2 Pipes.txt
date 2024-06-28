@@ -1,0 +1,46 @@
+What are Pipes? - Transform the data/output in the template
+
+    Pipes in Angular are like filters that you can use to transform data before displaying it in the template.
+
+Why do we need it?
+
+    Transformation: They allow you to transform data into a desired format.
+    Reusability: They can be reused across different components.
+
+Types of pipes:
+
+  1. Inbuilt pipes
+
+      <p>{{ today | date | lowercase}}</p>
+      <p>{{ 'hello' | uppercase }}</p>
+
+  2. Custom Pipes:
+
+  import { Pipe, PipeTransform } from '@angular/core';
+
+  @Pipe({name: 'customPipe'})
+  export class CustomPipe implements PipeTransform {
+    transform(value: string): string {
+      return 'Custom: ' + value;
+    }
+  }
+
+  Using Custom Pipe:
+  <p>{{ 'text' | customPipe }}</p>
+
+Pure and Impure pipes:
+    
+       By default pipes are pure and set to true internally. @Pipe({name: 'exponentialStrength',pure: true})
+       Angular executes a pure pipe only when it detects a pure change to the input value. 
+       A pure change is either a change to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object).
+       *view gets updated for change in input value or change in object reference.
+       
+       Impure pipe:
+       @Pipe({name: 'exponentialStrength', pure: false})
+       Angular executes an impure pipe during every component change detection cycle.
+       Impure pipes are executed even when source data is changed without change to the object reference.
+       An impure pipe is called as often as every keystroke or mouse-move.
+       *view gets updated for every DOM event.
+
+
+
