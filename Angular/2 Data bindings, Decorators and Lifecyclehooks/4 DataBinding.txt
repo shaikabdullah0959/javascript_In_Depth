@@ -1,0 +1,25 @@
+What is Data Binding? communication b/w component and html
+
+Types of Data Binding: one way data binding and two way data binding
+one way data binding - component to view(html) or view(html) to component
+Two-Way Binding: Binding both a property and an event to a class property.
+
+
+communication between component and html happens through binding
+      1. one way binding  
+          string interpolation {{}}, property binding  component -> html
+          event binding    html -> component
+      2. two way binding   c-> html and htlm -> c
+      3. one difference between interpolation and property binding is when a non string value(i.e, boolean true or false) is
+      assigned to attribute of html interpolation doesn't make a difference for both true or false where as p binding does.
+      e.g [disabled] ='true/false' disables/enables input fields
+          disabled='{{true/false}}' disables in both cases.
+      4. in case of binding a value to a string interpolation is used.
+         e.g <img src="images/{{imageName}}"  imageName is a variable in Component file.
+      5. to pass a value through event binding use $event. e.g (keyup) ="sendData($event)". To access the value in class
+      use event.target.value.
+      6. For two way binding ngModel is required and to be able to use it FormsModule is required. so import it in app.module.ts file.
+      <input [(ngModel)]="name">
+      7. property and event Binding can be used on custom properties and methods and inbuilt attributes.
+      custom property and event Binding - [fName]="firstName", (setLName)="setLastName()" 
+      inbuilt property and event Binding - [disabled]="true" (click)="xyz()"

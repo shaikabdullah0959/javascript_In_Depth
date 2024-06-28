@@ -1,0 +1,6 @@
+Browsers support two API's for making HTTP requests
+1. XMLHttpRequest interface
+2. fetch() API
+
+In Angular applications we use HTTPClient to communicate with backend services that rests on XMLHttpRequest
+interface

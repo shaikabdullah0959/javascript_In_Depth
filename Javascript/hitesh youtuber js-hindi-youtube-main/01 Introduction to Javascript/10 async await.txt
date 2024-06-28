@@ -1,0 +1,80 @@
+async - is a keyword written before a function
+async function  - always returns a promise
+                - if async function returns a string then first string is converted to promise and then returned
+
+async function getData() {
+    return "Hello"
+}
+const dataPromise = getData();
+
+console.log(dataPromise);
+// output
+    Promise {<fulfilled>: 'Hello'}
+    [[Prototype]]: Promise
+    [[PromiseState]]: "fulfilled"
+    [[PromiseResult]]: "Hello"
+
+
+dataPromise.then(res => {
+    console.log(res); // Hello
+})
+
+await - can only be used inside an async function
+
+
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => { resolve("p1 resolved")}, 2000);
+   
+});
+
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => { resolve("p2 resolved")}, 1000);
+   
+});
+
+async function handlePromise() {
+
+   const p1Data = await p1;
+   console.log("First promise");
+   console.log(p1Data);
+
+   const p2Data = await p2;
+   console.log("Second promise");
+   console.log(p2Data);
+
+}
+
+handlePromise();
+
+Execution flow of async await
+* first handlePromise is moved to call stack
+* when the flow is at await p1; then handlePromise() is suspended from call stack
+* Then once p1 is resolved, handlePromise() is again moved back to call stack and flow will be back at the position where it left i.e, at await p1 statment
+* Now when the flow is at await p2; then handlePromise() is suspended from call stack
+* Then once p2 is resolved, handlePromise() is again moved back to call stack and flow will be back at the position where it left i.e, at await p2 statment
+* Suppose if p1 takes more time and p2 takes less time to resolve the flow will not move to p2 because of the suspension of handlePromise from call stack when the flow is at await p1.
+* If p2 is resolved before P1 then once p1 data is printed then immediately p2 data will be printed 
+  bcoz p2 was resolved in less time than p1.
+
+
+  Error handling in async await
+  Example 1
+  async function process() {
+        try {
+            const user = await fetchUser(url);
+        } catch (err) {
+            console.error('Error:', err);
+        }
+   }
+   
+   process();
+  
+  Example 2
+
+  async function process() {
+     const user = await fetchUser(url);
+   }
+   
+   process().catch(err => console.log(err));
+
+  https://www.youtube.com/watch?v=6nv3qy3oNkc&t=252s

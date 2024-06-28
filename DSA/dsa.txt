@@ -1,0 +1,116 @@
+https://www.youtube.com/watch?v=uqU89z8DRDo - 30 Days DSA plan for job
+
+DSA Questions Topic Wise
+https://www.youtube.com/watch?v=eaSTgKS22Q0&list=PLG2BS7TpBTu21qKiPxWlGudOdatxTfRq-&index=23
+https://www.youtube.com/watch?v=uqU89z8DRDo&list=PLG2BS7TpBTu21qKiPxWlGudOdatxTfRq-&index=33&t=246s - topics to learn for each ds(https://drive.google.com/file/d/1IeNOlr4jqezRhuxSxIaOoNWRfDy4UJyU/view)
+
+https://github.com/singhsanket143/Data-Structures-Algorithms-Problem-Solving - dsa quetions
+https://www.youtube.com/watch?v=W-_qnPYxHdU - interview bit plan to solve DSA
+https://www.youtube.com/watch?v=Nx4bvwU0DqE - How to start leet code
+https://www.youtube.com/watch?v=Cb7At7agjlc - How to solve leet code
+https://www.youtube.com/watch?v=1Z3RrRYIoVs - Learn DSA in 6 months
+
+
+https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt - C++ DSA by Apna college
+https://www.youtube.com/watch?v=yRpLlJmRo2w&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop - Java DSA by Apna college
+https://www.youtube.com/watch?v=rZ41y93P2Qo&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ - DSA Java Kunal
+
+
+2. Grasp Time and Space Complexity:
+* Learn about Big O notation to analyze algorithm efficiency.
+* Understand how to measure time and space complexity of different operations.
+3. Explore Core Data Structures:
+	Arrays: Learn about indexing, manipulation, searching, and sorting.
+	Linked Lists: Understand nodes, traversal, insertion, deletion, and reversal.
+	Stacks: Explore LIFO operations, implementation, and use cases.
+	Queues: Learn FIFO operations, implementation, and applications.
+	Trees: Study binary trees, binary search trees, traversals, and their applications.
+	Graphs: Understand representations (adjacency matrix, adjacency list), traversal algorithms (BFS, DFS), and graph algorithms.
+	Hash Tables: Learn about key-value pairs, collisions, and applications.
+
+* Arrays:
+    * Implement various operations like searching, sorting, reversing, etc.
+    * Explore advanced techniques like two-pointer approach, sliding window, etc.
+* Linked Lists:
+    * Create singly and doubly linked lists.
+    * Implement operations like insertion, deletion, reversal, finding middle, etc.
+* Stacks:
+    * Use arrays or linked lists to implement stacks.
+    * Solve problems involving parentheses balancing, expression evaluation, etc.
+* Queues:
+    * Implement queues using arrays or linked lists.
+    * Solve problems related to BFS, level order traversal, etc.
+* Trees:
+    * Explore binary trees, binary search trees, and their traversals.
+    * Implement tree-based operations like insertion, deletion, searching, etc.
+* Graphs:
+    * Understand graph representations (adjacency matrix, adjacency list).
+    * Implement graph traversal algorithms (BFS, DFS).
+    * Solve problems like shortest path, cycle detection, etc.
+* Hash Tables:
+    * Understand hash functions and collision handling.
+    * Implement hash tables using arrays or objects.
+    * Solve problems involving frequency counting, anagrams, etc.
+4. Conquer Algorithms:
+* Searching: Linear search, binary search.
+* Sorting: Bubble sort, insertion sort, selection sort, merge sort, quick sort, heap sort. 
+* Recursion: Factorial, Fibonacci, tower of Hanoi, etc.
+* Divide and Conquer: Binary search, merge sort.
+* Greedy Algorithms: Activity selection, fractional knapsack.
+* Dynamic Programming: Fibonacci, longest common subsequence, knapsack problem.
+* Backtracking: N-Queens, Sudoku solver.
+
+
+Topic wise questions - https://www.youtube.com/watch?v=eaSTgKS22Q0&list=PLG2BS7TpBTu21qKiPxWlGudOdatxTfRq-&index=23
+ **Arrays 
+
+1. Subarray with given sum  
+2. Count the triplets  
+3. Kadane’s Algorithm  
+4. Missing number in array  
+5. Merge two sorted arrays  
+6. Rearrange array alternatively  
+7. Number of pairs  
+8. Inversion of Array  
+9. Sort an array of 0s, 1s and 2s  
+10. Equilibrium point  
+11. Leaders in an array  
+12. Minimum Platforms  
+13. Reverse array in groups  
+14. K’th smallest element  
+15. Trapping Rain Water  
+16. Pythagorean Triplet  
+17. Chocolate Distribution Problem  
+18. Stock buy and sell  
+19. Element with left side smaller and right side greater  
+20. Convert array into Zig-Zag fashion  
+21. Last Index of 1  
+22. Spirally traversing a matrix  
+23. Largest Number formed from an Array  
+---
+
+**Strings 
+
+1. Reverse words in a given string  
+2. Remove characters from first string which are present in second  
+3. Longest Common Prefix  
+4. Implement ATOI  
+5. Parenthesis Checker  
+6. Recursively remove all adjacent duplicates  
+7. Anagram  
+8. Isomorphic Strings  
+9. Count and Say  
+10. Roman Number to Integer  
+11. Longest Prefix Suffix  
+12. Check for balanced parentheses  
+13. Word Wrap  
+14. Longest Palindromic Substring  
+15. Edit Distance  
+16. Rabin-Karp Algorithm for Pattern Searching  
+17. KMP Algorithm for Pattern Searching  
+18. Zigzag Conversion  
+
+---
+
+System design
+https://blog.algomaster.io/t/system-design

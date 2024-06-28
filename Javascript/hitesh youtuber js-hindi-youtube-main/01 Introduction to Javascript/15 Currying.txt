@@ -1,0 +1,23 @@
+// Regular function
+function simpleFunction(param1, param2, param3) {
+    return param1 + param2 + param3;
+}
+
+// Curried function
+function curriedFunction(param1) {
+    return function(param2) {
+        return function(param3) {
+            return param1 + param2 + param3;
+        };
+    };
+}
+
+console.log(curriedFunction(4)(5)(6));
+
+
+Why is Currying useful in JavaScript?
+
+It helps us to create a higher-order function
+It reduces the chances of error in our function by dividing it into multiple smaller functions that can handle
+ one responsibility.
+It makes the code more readable

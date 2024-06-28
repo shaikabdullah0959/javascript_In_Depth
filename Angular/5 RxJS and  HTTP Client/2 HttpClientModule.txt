@@ -1,0 +1,36 @@
+What is the HttpClient Module?
+
+The HttpClient Module in Angular is like a courier service that allows you to send and receive data over HTTP.
+
+Why do we need it?
+
+Communication: It allows your app to communicate with back-end services.
+Asynchronous: It handles asynchronous data fetching and posting.
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+
+    @NgModule({
+    imports: [HttpClientModule],
+    })
+    export class AppModule { }
+
+    import { Component, OnInit } from '@angular/core';
+
+    @Component({
+    selector: 'app-my-component',
+    template: '<div>{{data | json}}</div>'
+    })
+    export class MyComponent implements OnInit {
+    data: any;
+
+    constructor(private http: HttpClient) { }
+
+    ngOnInit() {
+        this.http.get('https://api.example.com/data')
+        .subscribe(response => {
+            this.data = response;
+        });
+    }
+    }
+Observable is a HTTP response that arrives asynchronously.

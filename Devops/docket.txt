@@ -1,0 +1,193 @@
+DevOps Docker
+https://www.slideshare.net/slideshow/docker-kubernetes-130874362/130874362
+
+https://www.youtube.com/watch?v=6Mn0uHfa2lg - AWS instance launch
+
+Lecture 1
+
+sudo ssh -i "DT.pem" ec2-user@ec2-54-175-197-148.compute-1.amazonaws.com
+Sudo su - to become root user of the server and avoid sudo before every command
+Yum update -y -> updates  linux
+Sudo yum install docker -y
+Sudo docker —version
+Sudo docker info
+
+Which docker - /user/bin/docker
+
+Service docker status - ( check docker engine is started/running or not)
+1. Start Docker Service: After Docker is installed, start the Docker service using sudo service docker start or sudo systemctl start docker.
+
+Docker images -  shows all images present in local
+Docker search ubuntu - searches for ubuntu related images in docker hub
+Docker run -it --name Abdullah ubuntu /bin/bash (run is a combination of two things -> create + start -> create the container and start the container)
+     				 						      (it- > I -> interactive mode, t -> terminal) -> terminal of the container
+Exit - to some out of the container
+
+docker create --name mycontainer myimage - just create a container
+Docker start abdullah     - to start the container (abdullah is name of container)
+Docker attach cid             - to go inside container
+Docker stop cid              - to stop container
+Docker rm cid                 - delete container (rm- remove)
+
+
+Docker ps / docker container ls                 - shows all the running containers (ps - process status)
+Docker ps -a                                                - shows all the running and stopped containers
+
+Lecture 2
+
+Container to Image
+Create container and inside container create a file then create image of modified container
+
+1. Create container
+2. Cd temp/
+3. Touch filename
+4. Docker commit oldcontainerName newcontainerName -> new image is created
+
+Lecture 3
+
+DOCKER FILE
+
+FROM.               -> which OS to be present in imageRUN 		  -> Execute below commands present in docker file
+MAINTAINER  -> Author of this file
+COPY                ->  copy files from local system (we can’t download any file from Internet) provide source location destination
+ADD                  ->  (similar to COPY command but we can download any file from internet and it also extracts the file at image side e.g, downloads zip file and  then unzip the file)					provide source location destination
+EXPOSE           ->  expose port such as 8080 for tomcat, 80 for nginx
+WORKDIR       ->  set working directory for a container
+CMD		-> execute command during container creation
+ENTRYPOINT -> Similar to CMD but has higher priority , first commands will be executed present in entry point only
+ENV			  ->  name abdullah. (environment variables)
+
+
+Vi Dockerfile
+FROM ubuntu
+RUN echo “First Image” > /tmp/file - echo command will be printed inside temp folder on executing cat file 
+
+Docker build -t firstImage .
+Docker run -it --name containerName firstImage 
+Cd tmp
+Cat file. -> will print first image
+
+Docker file -> image ->. Container
+Step 1  Docker file.txt
+Step 2  Docker build -t firstImage . -> create a new image from docker file and dot  indicates create image in current directory where docker file is present.
+Step 3 Docker run firstImage or Docker run -it --name containerName firstImage -> container is created from firstImage
+
+FROM ubuntu
+WORKDIR /tmp
+RUN echo "Hello Docker" > /tmp/testfile
+ENV name Abdullah
+COPY testfile1 /tmp
+ADD test.tar.gz /tmp
+
+Vi Dockerfile
+Touch testfile1
+tar -cvf testfile1zip.tar testfile1
+gzip testfile1zip.tar
+
+Rm -rf filename - deletes files
+ 
+Lecture 4
+
+Docker volume
+
+- Volume is a directory(folder)
+- Any data present in volume can be shared with other container/ host
+- Can create volume thought docker file/ using command
+- Can declare directory as volume only while creating a container
+- Can’t create volume from existing container
+- We can access volume even if container is stopped
+
+Create volume from docker file
+
+FROM            ubuntu
+VOLUME.    [“/volume1”].   / -> root directory
+
+Create image -> create container -> ls will show volume1 -  volume1 created
+
+Create new container and share the volume
+
+docker run -it --name container2 --privileged=true --volumes-from container1 ubuntu /bin/bash
+
+Touch /volume1/file
+Docker start container1
+Docker attach container1
+Ls   /volume1
+
+Create volume from command
+
+docker run -it —name mycontainer -v /myvolume ubuntu
+
+Share volume between host and container
+
+ docker run -it --name container1 -v /home/ec2-user:/rajput —privileged=true  ubuntu /bin/bash
+
+Port Mapping
+Container doesn’t have its own IP address.
+
+
+Docker exe -it cid /bin/bash -  login to a container -> to login into container and container should be in running status. (-it -> interactive terminal)
+                                   Cat /etc/os-release -gives info about OS library inside container
+
+
+Docker pull tomcat           - downloads the image from docker hub to local
+Docker run tomcat:1.2.3
+Docker run tomcat           - downloads the image and create the container
+Docker run -it tomcat      - creates container with interactive mode I.e, we can interact with the container…..
+Docker start cid
+Docker stop cid    
+Docker kill cid                   cid - container id
+ 
+Docker inspect cid
+ 
+Docker run -d tomcat
+Docker run -d -P tomcat
+Docker run -d -p 1234:8080 tomcat.   (D- detach, p- port, 1234 - local port number, 8080 is port number of tomcat) localhost:1234/ -> will give us data from port 8080 I.e, data from tomcat
+ 
+
+ 
+
+Docker rm —force cid
+Docker rmi image_id -f
+
+ 
+ 
+Docker logs
+Docker stats
+
+
+Docker image -q  -> shows all image id’s
+Docker image -q  —no-trunc -> gives hash values of images
+Docker rmi $(docker image -q) - f -> delete all images in one shot
+
+Docker container prune -f -> deletes all stopped containers
+
+Docker commit -m “New image copy” 12346787       hello world.               -> commit will create a new image from old image id(12334…)
+                                   Commit msg          old image id. New image name
+
+ 
+*never modify inside a container instead create a new image and run the image to create a new container
+
+Docker create —name hello ubuntu
+
+
+
+
+
+————————
+
+
+Before Docker
+
+1. One server was used for one application and resources like cpu, ram and memory were not used completely by the server.
+       E.g, If the server has 100gb Ram and 100 core CPU and if an application requires only 8gb ram and 10 core cpu then remain RAM and CPU are not being used efficiently.
+1. To make use of resources and to run multiple applications in one server, virtualisation concept was used.
+2. Virtualization is creating virtual machines(multiple servers/machines) inside a single server.
+3. To create VM, Hypervisor is used. A hypervisor is computer software or hardware that enables you to host multiple virtual machines.
+4. Hypervisor allocates required resources to each VM while creating a VM. Each VM has one OS. In a single server if there are multiple VM’s then the performance will go down bcoz of shared resources and Even VM resources might not used in full. High cost is involved while setting up a server with multiple. VM’s
+5. To solve the above problem, Containers came into the pictures. Containers are light weight, contain only required files to run an application.
+6. A container is a lightweight, standalone, and executable software package that contains everything needed to run a piece of software, including the code, runtime, system tools, libraries, and settings
+7. Container doesn’t have its own OS.
+8. To create containers, Docker is used and Docker has 3 parts a. Docker runtime, b. Docker engine, c. Orchestration      a. Docker runtime has 2 parts                        1. Low level runtime  or runs -> used to start or stop containers            2. Containerd - manages runc, connect with internet and pull the images.     b. Docker engine -is used to interact with server/daemon          daemon consistently listens to API requests from Docker CLI and process them ( docker daemon -> process in background )     c. Orchestration - is used to scale up the containers or restart stopped containers or update the version of containers. Orchestration is done using docker Swarm/Kubernetes.
+9. Container is created from docker image and docker image is created from docker file. Docker file has list of instructions related to the application e.g dependencies.
+10. Docker Image -> is a read only template with instructions for creating a docker container
+11. Docker engine runs natively on Linux OS

@@ -1,0 +1,50 @@
+1. What is the main purpose of Angular?
+2. What are directives in Angular and how many types of directives exist?
+3. Explain data bindings and the different types.
+4. What are the basic components involved in Angular?
+5. What’s the difference between AngularJS and Angular?
+6. What are components and modules in Angular?
+7. What are decorators in Angular?
+8. What is metadata or annotations in Angular?
+9. What are templates in Angular?
+10. What is SPA and how do you implement it in Angular?
+11. Explain the importance of routing in Angular & how to implement it.
+12. What is lazy loading in Angular?
+13. How do you implement lazy loading in Angular?
+14. What is Node.js?
+15. What is NPM?
+16. Why is the node_modules folder important?
+17. What is package.json?
+18. What is TypeScript?
+19. What is the need for Angular CLI?
+20. What are services in Angular?
+21. When would you use content projection?
+22. Explain content projection slots in Angular.
+23. Why do we need ViewChild and ViewChildren in Angular?
+24. What is a template reference variable?
+25. Explain ContentChild and ContentChildren.
+26. Differentiate between ViewChild, ViewChildren, ContentChild, and ContentChildren.
+27. What is { static: true } in ViewChild?
+28. What is the importance of Angular component hooks/life cycles?
+29. Explain Angular life cycle hooks in detail.
+30. Differentiate between constructor and ngOnInit().
+31. How do you implement lazy loading in Angular?
+32. How do you implement HTTP in Angular?
+33. How do you pass data between components?
+34. What are pipes in Angular?
+35. Can you give examples of inbuilt Angular pipes?
+36. How do you write a custom pipe?
+37. What is RxJs and why is it needed?
+38. What are observables and observers?
+39. What is a stream in RxJs?
+40. What is the use of subscribe in RxJs?
+41. How do you unsubscribe from a stream?
+42. What are operators in RxJs?
+43. Where have you used RxJs in Angular?
+44. Differentiate between RxJs and Promises.
+45. How do you install RxJs?
+46. Why is RxJs called push/reactive and not pull/imperative?
+47. Name some RxJs operators.
+48. What are interceptors in Angular?
+49. How do you implement interceptors?
+50. What are some uses of interceptors, and can we provide multi-interceptors?

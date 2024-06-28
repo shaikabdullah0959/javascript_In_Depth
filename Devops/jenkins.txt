@@ -1,0 +1,97 @@
+DevOps Jenkins
+
+* Install the latest LTS version: brew install jenkins-lts
+* Start the Jenkins service: brew services start jenkins-lts
+* Restart the Jenkins service: brew services restart jenkins-lts
+* Update the Jenkins version: brew upgrade jenkins-lts
+
+Password 90a78880e60844adb556de9afa88ee9c
+
+Pipeline - step by step automated process to deliver software
+Continuous integration =  Continuous build + Continuous test
+
+CI/CD pipeline 
+
+    Developer -> Version control -> Jenkins -> Build -> Jenkins -> Unit test  -> Jenkins -> Deploy   -> Measure & validate
+
+
+CI                            		  CD
+
+Plan                     	  		 Deploy
+
+Code.          Jenkins      		 Operate
+                     Integration 
+             		tool
+Build                 	 		Monitor
+
+Test
+
+Plan n code -> git hub
+
+Build -> maven/gradle
+
+Test -> Junit
+
+Deploy/operate -> chef/puppet
+
+Monitor -> Nagios
+
+
+Advantage of CI -> Bugs will be identified as soon as the build starts and report it to the developer
+
+* We need GitHub plugin, maven plugin, unit plugin, deployment plugin for Jenkins to execute the pipeline
+* Plugin - provides communication tool b/w Jenkins and github/maven/testing tools
+* Jenkins has master-slave architecture 
+* Jenkins can do scheduled task
+
+                   								BUILD 
+
+Compile ->  code review -> unit testing -> packaging (jar, war)
+
+
+To add pluggins in Jenkins
+
+ 1. Manage Jenkins.
+ 2. Global tool configuration.
+ 3. Add plugins in step 2
+
+To create a new Maven project pipeline
+
+1. Dashboard
+2. New item
+3. Select maven project
+4. Give reference of github project url
+5. Under goal and options write ->  clean package
+
+How to trigger build on every commit
+
+1. Go to Project
+2. Right click -> configure
+3. Under source code management tab ->  build triggers -> select Poll SCM-> type 5 stars * * * * * ->  save
+     Or 
+1. Under source code management tab ->  build triggers -> select build periodically-> type 5 stars * * * * * -> save.  -> to trigger build whenever we want like for 1 hr or after 1 day
+
+
+Linked Projects
+
+They are of two types 1. Upstream 2. Downstream
+1. Upstream 
+        Job A -> Job B  Once Job A is done Job B will start 
+       Job A -> right click configure -> under general  -> Post build Action -> select build other projects -> select second Job -> save
+ 2. Downstream
+      Job B will wait for the completion of Job A and then Job B will start.
+      Job B -> right click configure -> under general  ->  Build triggers -> select Build after other projects are built -> enter JobA name
+
+Manage Users
+
+By default user will have all right just like admin
+Dashboard  -> Manage Jenkins -> manage users -> create user
+
+To add restrictions
+Dashboard  -> Manage Jenkins -> under system configuration ->manage plugins -> add role based authorisation strategy
+Dashboard  -> Manage Jenkins -> under security -> configure global security -> Authorisation -> select role based strategy
+
+To add roles for the users
+Dashboard  -> Manage Jenkins -> under security ->  Manage and Assign roles
+
+Master Slave Configuration - Technical guftgu

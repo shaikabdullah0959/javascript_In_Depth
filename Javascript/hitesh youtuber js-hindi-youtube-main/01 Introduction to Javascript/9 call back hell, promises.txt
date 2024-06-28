@@ -1,0 +1,170 @@
+Issues with callback is
+ 1. callback hell
+ 2. Inversion of control
+
+ let cart = [1,2,3];
+api.createOrder(cart, function() {
+
+  api.proceedToPayment( function() {
+
+    api.showSummary(function() {
+
+    });
+  });
+});
+
+1. "Callback hell" is a situation in asynchronous programming, where nested callbacks make the code difficult to read and maintain.
+ This often results from a series of nested functions that are used to handle asynchronous operations
+ like API calls, database queries, or event handling
+
+2. showSummary is dependent on proceedToPayment. If proceedToPayment succeeds then only showSummary will execute.
+ Hence control of showSummary is moved to proceedToPayment which is called as inversion of control.
+
+ https://www.youtube.com/watch?v=yEKtJGha3yM&list=PLlasXeu85E9eWOpw9jxHOQyGMRiBZ60aX&index=2
+
+ Promises
+ To handle asynchronous operations, promises are used.
+ Promise is an object which represents the eventual completion or failure of an asynchronous operation.
+  pending : initial state, neither fulfilled or rejected
+  fulfilled: operation completed successfully
+  rejected: operation failed
+  
+  Key Features of Promises:
+  A promise can be in one of three states:
+  Pending: The initial state of the promise. The operation has not completed yet.
+  Fulfilled: The operation completed successfully, and the promise now holds the resulting value.
+  Rejected: The operation failed, and the promise holds the reason for the failure.
+  Immutability: Once a promise resolves to either a fulfilled or rejected state, it cannot change its state again.
+  The value or the rejection reason it holds becomes immutable, and all further attempts to resolve or reject it are ineffective.
+
+                            Wait for all promises(success scenario)           doesn't Wait for other promises (failure  scenario) 
+ promise.all                    yes                                            Doesn't wait (if one of the promises fail then it returns the error)
+ promise.allSettled             yes                                            It wait's for other promises even if one of the promises fails
+ promise.race                   No(Returns the first settled promise(success or failure))
+ promise.any                    waits for first settled promise (successful)
+
+ let p1 = new promise((resolve,reject) => { 
+    setTimeout(() => {resolve("p1 success")}, 3000);
+    // setTimeout(() => {reject("p1 fail")}, 3000);
+ })
+  let p2 = new promise((resolve,reject) => { 
+    setTimeout(() => {resolve("p2 success")}, 1000);
+    // setTimeout(() => {reject("p2 fail")}, 1000);
+ })
+  let p3 = new promise((resolve,reject) => { 
+    setTimeout(() => {resolve("p3 success")}, 2000);
+    // setTimeout(() => {reject("p3 fail")}, 2000);
+ })
+
+1. promise.all([p1,p2,p3]).then(function(result) { 
+    console.log(result);   
+ }).catch(err => console.error(err));
+
+   // case p1 fulfilled, p2 fulfilled, p3 fulfilled
+  output ['p1 success', 'p2 success', 'p3 success'] after 3s in all promises success case
+
+ // case p1 fulfilled, p2 rejected, p3 fulfilled
+ output if p2 is rejected then output will be p2 fail after 1s 
+
+ 2. promise.allSettled([p1,p2,p3]).then(function(result) {
+    console.log(result);
+ })
+// all promises success case
+ [
+    {
+        "status": "fulfilled",
+        "value": "p1 success"
+    },
+    {
+        "status": "fulfilled",
+        "value": "p2 success"
+    },
+    {
+        "status": "fulfilled",
+        "value": "p3 success"
+    }
+]
+// if p2 is rejected then result is
+[
+    {
+        "status": "fulfilled",
+        "value": "p1 success"
+    },
+    {
+        "status": "rejected",
+        "reason": "p2 fail"
+    },
+    {
+        "status": "fulfilled",
+        "value": "p3 success"
+    }
+]
+3. promise.race([p1,p2,p3]).then(function(result) {
+    console.log(result);
+ })
+
+ // case p1 fulfilled, p2 fulfilled, p3 fulfilled
+ output p2 success bcoz p2 is resolved in 1 sec  - first settled promise 
+
+4. promise.any([p1,p2,p3]).then(function(result) {
+    console.log(result);
+ })
+
+// case p1 fulfilled, p2 rejected, p3 rejected
+  output - p1 success after 3 seconds waits for first fulfilled promise and then returns the result.
+// case p1 rejected, p2 rejected, p3 rejected
+AggregateError: All promises were rejected
+
+
+https://www.youtube.com/watch?v=DlTVt1rZjIo&list=PLlasXeu85E9eWOpw9jxHOQyGMRiBZ60aX&index=5
+
+Promise chaining Examples
+
+  function one() {
+    const promise1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(1)
+      }, 1000)
+    })
+    return promise1
+  }
+
+  function two() {
+    const promise2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(2)
+      }, 2000)
+    })
+    return promise2
+  }
+
+  function three() {
+    const promise3 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(3)
+      }, 3000)
+    })
+    return promise3
+  }
+
+  async function test() {
+    try {
+      // Sequentially calling api one after the other
+      const resp1 = await one()
+      const resp2 = await two()
+      const resp3 = await three()
+      const output = resp1 + resp2 + resp3
+      console.log("Response is" + output)
+
+      // Calling api's in parallel
+      const output1 = await Promise.allSettled([one(), two(), three()])
+      console.log("Response is" + JSON.stringify(output1))
+    } catch (error) {
+      console.log("Error is" + error)
+    }
+  }
+
+  test()
+
+
+

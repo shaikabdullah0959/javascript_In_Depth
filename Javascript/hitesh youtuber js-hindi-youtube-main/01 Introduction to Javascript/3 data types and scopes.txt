@@ -1,0 +1,106 @@
+Data types
+Two types of data types
+
+1.Primitive 
+  Number, string, boolean, null, undefined, symbol
+
+  const sym = Symbol("key");
+  const obj = {
+      name: "ABD",
+      [sym]: "sss"
+  };
+
+  console.log(obj[sym]); // "sss"
+  console.log(Object.keys(obj)); // ['name'] sym keys are ignored
+  // symbols are unique
+
+
+2. Non Primitive data types
+   array, object, regexp
+/*
+Variables can be declared using var/let/const
+ - var vs let vs const
+
+    | Feature          | `var`                               | `let`                                   | `const`                                    |
+    |------------------|-------------------------------------|-----------------------------------------|--------------------------------------------|
+    |Scope             | Function-scoped                     | Block-scoped                            | Block-scoped                               |
+    |Hoisting          | Hoisted and initialized to `undefined` | Hoisted but not initialized          | Hoisted but not initialized (temporal dead zone) |
+                                                                (temporal dead zone) 
+    |Re-declaration    | Allowed                            | Not allowed                             | Not allowed                                |
+    |Initialization    | Optional                           | Optional                                | Required                                   |
+    |Re-assignment     | Allowed                            | Allowed                                 | Not allowed                                |
+    |Use case          | Older code, less strict scope needs | Variables that will change, block scope | Constants, variables that should not change |
+
+
+  Null vs undefined
+
+  - if we don't assign any value to a variable then in the memory component undefined is assigned to it as a temporary value untill a new value is initialized
+  - if we want a variable to hold an (empty value or no value) then we can assign it with null
+*/
+
+/*
+
+Lexical Scope
+   https://www.youtube.com/watch?v=uH-tVP8MUs8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=8  (scope and lexical environment explanation)
+ - Scope determines where a variable can be accessed in our code.
+    
+    var a = 10;
+    function square() {
+      var result = 20;
+      c();
+      function c() {
+        console.log(a);
+      }
+    }
+    square();
+    
+     - lexical environment is local memory(present in EC) of c + lexical environment of its parent i.e, square. 
+    For above code
+    1. global execution context(GEC) is created and memory is allocated for a and square. GEC Placed in call stack
+    2. Then when square function is invoked then again execution context is created for this. Memory for result and function c is allocated in EC. Square fn is placed in call stack
+    3. Then when c is invoked, EC is created for function c.
+    4. JS engine tries to find the value of a in Execution context memory of function c. if the value is not available then it searches in
+       parent scope which is EC of function square.
+    5. if value is not available in memory of fn square then it searches in memory of GEC.
+
+Block
+- is defined by curly braces {}
+- to group multiple statements in javascript block is required. 
+   e.g; we can't have var x = 10; var y = 20; after if(true);
+        if (true) var x = 10; is valid
+        if (true) var x = 10; var y = 20; is invalid - to solve this block is required
+           if (true) {
+            var x = 10;
+            var y = 20;   // multiple statements
+           } 
+Block scope
+- The block scope refers to the variables and functions that can be accessed within the block  {}.
+
+Shadowing
+- Shadowing in JavaScript occurs when a variable declared within a certain scope (like inside a function or block) has the same name as a variable declared in an outer scope.
+ The inner variable "shadows" the outer one, meaning the inner variable takes precedence over the outer variable within its scope.
+ e.g,
+
+  let x = 10; // Outer variable // variable x is present under script scope in dev tools
+  function example() {
+      let x = 20; // Inner variable shadows the outer variable 
+      console.log(x); // Outputs 20
+  }
+  example();
+  console.log(x); // Outputs 10
+  // https://www.youtube.com/watch?v=lW_erSjyMeM&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=10 
+
+*/
+
+Summary
+* Primitive data types and non primitive data types
+* diff between var, let and const
+* scopes - global scope, function scope, block scope and lexical scope
+         global scope - variable can be accessed anywhere
+         function scope - variable can be accessed only inside fn
+         block scope - variable can be accessed only inside block {}
+         lexical scope - outer function variable can be accessed in inside function
+* context - Context says what's the value of the this keyword
+
+Context is most often determined by how a function is invoked with the value of this keyword and 
+scope refers to the visibility of variables.

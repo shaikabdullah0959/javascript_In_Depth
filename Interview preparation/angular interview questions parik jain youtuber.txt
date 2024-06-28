@@ -1,0 +1,65 @@
+Angular Interview Questions
+
+→ Beginner 
+21. What is Angular and why is it used?
+22. What are Angular components?
+23. What is data binding in Angular?
+24. What is the purpose of Angular decorators?
+25. What is Angular CLI and why is it useful?
+26. What is an Angular module (NgModule) and what is its role?
+27. What is dependency injection in Angular?
+
+→ Intermediate
+28. How does Angular’s change detection mechanism work?
+29. What are Angular lifecycle hooks and give an example of using ngOnInit.
+30. How do you implement routing in Angular?
+31. What are reactive forms in Angular and how do they differ from template-driven forms?
+32. How do you share data between Angular components using services?
+33. How does lazy loading work in Angular and why is it beneficial?
+34. How can you use Angular’s HttpClient to perform HTTP requests?
+
+→ Advanced 
+35. How does Angular’s OnPush change detection strategy work and when should it be used?
+36. Explain Angular Zones and their role in change detection.
+37. How can you optimize performance in a large-scale Angular application?
+38. How do you create a custom pipe in Angular and when would you use one?
+39. Explain the role of RxJS in Angular and how Observables are used for reactive programming.
+40. How do you implement HTTP interceptors in Angular for error handling and logging?
+
+ React Interview Questions
+
+→ Beginner 
+1. What is React and why is it used?
+2. What is JSX and how does it differ from regular JavaScript?
+3. What are components in React?
+4. What is state in React and how is it managed in functional components?
+5. What are props in React and how are they used?
+6. How do you handle events in React?
+7. What is the difference between controlled and uncontrolled components?
+
+Also, I’ve prepared a full frontend preparation interview kit to help you crack frontend jobs in 2025, This post is from a small section of the guide; I’ve also added:
+- 100+ company-asked questions (MNCs + startups) 
+- Clean, structured code snippets 
+- Visual guides to tough concepts 
+- JS, React, DOM, CSS deep dives 
+- Real-world component challenges 
+- Resume tips, mock rounds, and more
+
+Check it out: https://bit.ly/3QTt8ZH
+
+→ Intermediate 
+8. Explain React’s reconciliation process and the Virtual DOM.
+9. How does the useEffect hook work in functional components?
+10. How do useMemo and useCallback optimize performance in React?
+11. How do you implement lazy loading of components using React.lazy and Suspense?
+12. How does the React Context API work for managing global state?
+13. How do you implement dynamic routing in a React application using React Router?
+14. What is the purpose of the useReducer hook and when should it be used over useState?
+
+→ Advanced 
+15. Discuss the React Fiber architecture and its benefits over the previous stack.
+16. How does React’s concurrent mode work, and what benefits does it offer?
+17. Explain error boundaries in React and how they help manage errors.
+18. How would you implement server-side rendering (SSR) in React, and what are its advantages?
+19. Compare Higher-Order Components, render props, and custom hooks for code reuse in React.
+20. How do you optimize performance in a large-scale React application?

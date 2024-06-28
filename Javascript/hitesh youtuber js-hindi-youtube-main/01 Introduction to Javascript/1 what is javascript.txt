@@ -1,0 +1,50 @@
+Understanding JavaScript Execution: The Core Fundamentals
+
+ JavaScript code execution happens inside the execution context
+- Execution context acts as a container for JavaScript code
+- Key fundamentals of JavaScript execution
+
+ Execution context is like a big box
+- It has two components: memory and code components
+- Memory component stores variables and functions as key-value pairs
+
+ Execution context comprises memory component and code component.
+- The memory component is also known as the variable environment which stores variables and functions as key-value pairs.
+- The code component is where the code is executed one line at a time.
+
+  Memory              Code (Thread of Execution)
+|------------------|-------------------------------------|
+  key:value pair         line of code
+   a : 10                -----------
+   fn {..}               line of code
+
+JavaScript is a synchronous single threaded language
+- code component is also known as the thread of execution.
+- The thread of execution is like a thread in which the whole code is executed one line at a time.
+
+Synchronous single threaded means
+- It can only execute one command at a time
+- Commands are executed in a specific order i.e, line by line
+
+index.js
+var a = 10;
+function square() {
+  var result = 20;
+  return 20;
+}
+
+For the code in index.js
+First memory is allocated for a and function square in memory component
+Second when function goes into call stack then a new execution context is created which will again have 2 components memory and code
+
+|Square| -> a new Execution context is created for square
+|------|
+| GEC   |
+-------
+call stack
+
+akshay saini youtube series of JavaScript
+https://www.youtube.com/watch?v=ZvbzSrg0afE&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=2
+
+
+

@@ -1,0 +1,59 @@
+
+1. In JS, before the code is executed, memory is allocated to the variables in memory component and  get initialized to undefined.
+2. for functions, block containing the code of function is assigned to function name eg square;
+    function square() 
+    { // block
+        console.log("hello"); // block
+    } // block
+3. Arrow function/function expression  are not hosited
+   Arrow function/function expression act as variables and get "undefined" during the memory creation phase.
+   var x = () => 2 + 2;
+   var y = function() {};
+   Here x, y is stored as variables in memory and hence if we call x(); before the function declaration
+
+    x(); // this will throw error -> type error x is not a function. type error is because of x being a variable rather than function.
+    var x = () => 2 + 2;
+4. Exploring the Temporal Dead Zone concept for let and const in JavaScript
+   let , const variables are also hoisted and they are hoisted under script object not global object
+   variables present in global object prints undefined. a is present in global object bcoz of var keyword
+   console.log(a);
+   var a = 10;
+   variables present under script object throws reference error. b is present in script object in browser
+   console.log(b);
+   let b = 10;
+   variable b will be in Temporal Dead Zone  untill the value is intialized to it.
+   any variable which is in Temporal Dead Zone will throw reference error.
+   Temporal Dead Zone  - is the time when variable b got hosited and till variable b is intialized
+
+5. syntax error
+    const z;
+    console.log(z);  throws syntax error bcoz z is not intialized with a value.
+    
+   Type error
+     x(); // this will throw error -> type error x is not a function. type error is because of x being a variable rather than function.
+     var x = () => 2 + 2;
+
+     const b = 1000;
+     b = 5; // type error we cannot reassign
+
+    Reference error
+     variables present under script object throws reference error. b is present in script object in browser
+     console.log(b);
+     let b = 10;
+
+6. console.log(z); throws reference error bcoz there is no such variable in memory since we have not declared z
+
+
+
+https://www.youtube.com/watch?v=Fnlnw8uY6jo&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=4 - hoisting
+https://www.youtube.com/watch?v=BNC6slYCj50 - Temporal Dead Zone 
+
+Summary
+
+* var variable are hoisted under global object, let and const are hoisted under script object but will be in Temporal Dead Zone
+* functions are hoisted but arrow fn and fn expression are not hoisted bcoz these are assigned to variables and in the 
+  memory they are stored as variables not fn's
+* Types of errors
+  syntax error - printing const variable whose value is not assigned
+  type error - calling arrow fn before declaration
+  reference error - accessing let variable before declaration

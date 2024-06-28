@@ -1,0 +1,64 @@
+In JavaScript, prototypes and prototypal inheritance are key concepts that underlie the object-oriented nature of the language.
+Here's a detailed explanation of each:
+
+Prototype
+A prototype is a mechanism by which JavaScript objects inherit properties and methods from other objects.
+Every JavaScript object has a prototype, which is also an object.
+When you create a new object, it inherits properties and methods from its prototype.
+
+Prototype Chain
+When you try to access a property on an object, JavaScript first looks at the object itself. If the property is not found, it then looks at the object's prototype, and then at the prototype's prototype, and so on, until it either finds the property or reaches the end of the prototype chain (usually Object.prototype).
+
+const obj = {};
+console.log(obj.toString);  // Output: function toString() { [native code] }
+In this case, obj does not have a toString method directly. JavaScript looks up the prototype chain and finds toString in Object.prototype.
+similarly we have Array.prototype and in prototype (which is an object) has array methods like push, pop etc....
+
+Prototypal Inheritance
+Prototypal inheritance is a feature in JavaScript where objects inherit properties and methods from other objects. Instead of classical inheritance (where classes inherit from other classes), JavaScript uses objects as the primary means of inheritance.
+
+e.g,
+const person = {
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+const alice = Object.create(person); // creating alice object and this is inheriting method present in person
+alice.name = 'Alice';
+alice.sayHello();  // Output: Hello, my name is Alice
+Here, person is an object with a sayHello method. alice is created using Object.create(person), so alice inherits from person.
+
+
+
+example 2
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.sayHello = function() {
+    console.log(`Hello, my name is ${this.name}`);
+};
+
+const alice = new Person('Alice');
+alice.sayHello();  // Output: Hello, my name is Alice
+
+
+Diff between __proto__ and prototype
+1. __proto__ is used on object instances.
+2. prototype is used on constructor functions.
+
+example for __proto__ is used on object instances.
+const obj = {};
+obj.__proto__.sayHello = function() { console.log('Hello!'); };
+obj.sayHello();  // Output: Hello!
+console.log(obj)
+
+Summary
+1. A prototype is a mechanism by which JavaScript objects inherit properties and methods from other objects.
+2. we have Number.prototype, String.prototype, Array.prototype, Object.prototype
+   All these prototypes has methods. console.log(Array.prototype)
+3. Prototype Chain - Every object has a prototype, forming a chain until reaching null.
+   Object.prototype.__proto__ is null
+4. Prototypal Inheritance - Prototypal inheritance is a feature in JavaScript where objects inherit properties
+                            and methods from other objects.

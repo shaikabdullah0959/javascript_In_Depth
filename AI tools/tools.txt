@@ -1,0 +1,70 @@
+10 AI Tools
+
+1. ChatGPT -> 
+
+
+PPT on Docker
+ Research -> outline
+Research
+1. Give me some details about Docker on ChatGPT.
+2. Give me a 10 page presentation on Docker.
+3. Act as a speech coach. Please give me the exact script that I should be following to deliver the presentation in front of my bosses.
+
+
+Prompt ->  Below is my resume then paste
+ below is my job description then paste
+Modify my above resume to make it ATS friendly 
+
+
+
+2. Get entire presentation using gamma.app
+
+    1. Create new
+    2. Create a presentation on Docker
+     3. Select theme
+      
+
+3. Paywallhub.com
+    To remove paywall on articles -> paywall means only half article is readable and other half is not. With paywallhub other half article can be read free of cost
+     Copy url
+ 	paster url
+   4. Sci-hub.se
+      Read research papers for free if they are paid
+
+5. Merlin chrome extension 
+
+    Copy the text of the article -> right click-> give context to merlin -> create LinkedIn post
+     It will also help to generate the summary
+    
+    Open YouTube.com and click on summarise the video
+
+6. Create artwork or image - playground.ai
+
+    Give prompt it will give image
+
+7. Speech coach. - practice for interview/ presentation/speech
+     Yoodli - app.yoodli.ai
+   
+8. Gemini.google.com -  writes complicated codes
+
+9. Debugcode.ai
+      Codedamn.com/ai - debugs ur code
+
+  10. https://formula.dog/ - generate excel formula
+
+
+TOOL 1 https://chat.openai.com/
+TOOL 2 http://gamma.app/
+TOOL 3 https://paywallhub.com/
+TOOL 4 https://sci-hub.se/
+TOOL 5 https://chrome.google.com/webstore/detail/chat-with-merlin-ai-assis/camppjleccjaphfdbohjdohecfnoikec
+TOOL 6 https://playgroundai.com/
+TOOL 7 https://app.yoodli.ai/
+TOOL 8 gemini.google.com/app
+TOOL 9 https://debugcode.ai/
+TOOL 10 https://formula.dog/
+
+
+Video making
+https://www.flexclip.com/youtube-video.html
+https://ai.invideo.io/

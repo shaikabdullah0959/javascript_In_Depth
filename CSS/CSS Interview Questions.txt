@@ -1,0 +1,86 @@
+
+1. What is the difference between DIV and SPAN in HTML?
+
+2. Explain how inheritance works in CSS.
+
+3. What is CSS specificity, and how does it work?
+
+4. What does RGB stand for in CSS?
+
+5. What is the "A" in RGBA?
+
+6. What are HEX values in CSS?
+
+7. How are pixels, font-size, width, and height used in CSS?
+
+8. What does the percent unit (%) mean in CSS?
+
+9. What are Em units in CSS?
+
+10. What is Rem in CSS?
+
+11. What are ViewPort units in CSS?
+
+12. How is the calc() function used in CSS?
+
+13. What does the min-height property do in CSS?
+
+14. What does the max-height property do in CSS?
+
+15. What is a font stack, and what are generic fonts in CSS?
+
+16. What are font-weight and font-style in CSS?
+
+17. How is the text-indent property used in CSS?
+
+18. What are other text properties available in CSS?
+
+19. Explain the CSS Box Model.
+
+20. What does the display property do in CSS?
+
+21. What is the box-sizing property in CSS?
+
+22. How does display: inline-block differ from other display properties?
+
+23. What is the background-attachment property in CSS?
+
+24. What is the difference between display, opacity, and visibility in CSS?
+
+25. How do float and clear properties work in CSS?
+
+26. What is the difference between position: static and position: relative in CSS?
+
+27. What is the difference between position: absolute and position: fixed in CSS?
+
+28. Explain position: sticky in CSS.
+
+29. What is the z-index property in CSS?
+
+30. How do before and after pseudo-elements work in CSS?
+
+31. What are descendant and child selectors in CSS?
+
+32. How do first-line and first-letter selectors work in CSS?
+
+33. What is the :root element in CSS?
+
+34. How is the :root element used in CSS?
+
+35. What is a transition in CSS, and how does it work?
+
+36. What is an animation in CSS, and how does it work?
+
+37. What are CSS variables, and how do you use them?
+
+38. How does the box-shadow property work in CSS?
+
+39. What is the difference between Flexbox and Grid in CSS?
+
+40. How does position: relative differ from position: absolute in CSS?
+
+41. What is CSS selector specificity, and how does it work?
+
+42. What is the difference between resetting and normalizing CSS, and which would you choose and why?
+
+43. Describe the Block Formatting Context (BFC) and how it works.

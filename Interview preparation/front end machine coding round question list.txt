@@ -1,0 +1,65 @@
+80% of Machine Coding Rounds Are Based on These 20% of Problems 
+(Bookmark this if you’re targeting front-end roles in 2025) 
+
+Here’s the list of 40 must-know problems you should master to ace your machine coding rounds: 
+
+Also, I’ve prepared a full frontend preparation interview kit to help you crack frontend jobs in 2025, This post is from a small section of the guide; I’ve also added:
+- 100+ company-asked questions (MNCs + startups) 
+- Clean, structured code snippets 
+- Visual guides to tough concepts 
+- JS, React, DOM, CSS deep dives 
+- Real-world component challenges 
+- Resume tips, mock rounds, and more
+
+Check it out: https://bit.ly/3QTt8ZH
+
+🟢 Easy Level (10 Questions)
+
+1. Static Landing Page 
+2. Responsive Button with Hover Effect 
+3. Simple Form with Validation 
+4. Simple Image Slider (Auto-transition) 
+5. Basic Modal Popup 
+6. Tooltip on Hover 
+7. Loading Spinner Component 
+8. Toggle Dark/Light Theme Button 
+9. Scroll to Top Button 
+10. Expand/Collapse Content Section 
+
+🟡 Medium Level (15 Questions)
+
+11. Responsive Navigation Bar with Hamburger Menu 
+12. Accordion Component 
+13. Tabbed Interface 
+14. To-Do List Application 
+15. Countdown Timer 
+16. Image Gallery with Lightbox Effect 
+17. Multi-step Form Wizard 
+18. Pagination Component 
+19. Search with Autocomplete 
+20. Drag-to-Scroll Container 
+21. File Upload UI with Preview 
+22. Copy to Clipboard Feature 
+23. Star Rating Component 
+24. Responsive Cards Grid 
+25. Sticky Header on Scroll 
+
+🔴 Hard Level (15 Questions)
+
+26. Custom Video Player with Volume & Play/Pause 
+27. Dynamic Data Table with Sorting & Filtering 
+28. Full-Featured Calculator 
+29. Weather App UI (with API call or mock) 
+30. CRUD Application with Client-Side Routing 
+31. Infinite Scrolling with Lazy Loading 
+32. Drag-and-Drop Kanban Board 
+33. Real-Time Chat UI with Socket Integration 
+34. Form Builder with Dynamic Fields 
+35. Advanced Dashboard with Chart.js or D3.js 
+36. Virtualized List for Large Data Sets 
+37. File Explorer UI with Expandable Folders 
+38. Notification Toast System 
+39. Reorderable List with Drag-and-Drop 
+40. Custom Context Menu on Right Click
+
+https://www.youtube.com/channel/UCvmqI5F-hOdYV9tj81mPlzA/community?lb=Ugkxb7ivxB41wFdZ3cfbK2MiYxuB494JqB0b
