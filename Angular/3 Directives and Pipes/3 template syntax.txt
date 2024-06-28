@@ -1,0 +1,21 @@
+Template syntax in Angular is like a special language that you use to write templates.
+It allows you to bind data, handle events, and use directives and pipes.
+
+Key Concepts:
+
+Template Reference Variables: References to DOM elements or component instances.
+Input Properties: Bind values to component properties.
+Output Properties: Bind events to component event emitters.
+Event Binding: Bind events to methods in the component.
+
+Template Reference Variables:
+    <input #myInput>
+    <button (click)="showValue(myInput.value)">Show Value</button>
+Input Properties:
+    <my-component [title]="pageTitle"></my-component>
+Output Properties:
+    <my-component (clicked)="handleClick()"></my-component>
+Event Binding:
+    <button (click)="onClick()">Click me</button>
+
+

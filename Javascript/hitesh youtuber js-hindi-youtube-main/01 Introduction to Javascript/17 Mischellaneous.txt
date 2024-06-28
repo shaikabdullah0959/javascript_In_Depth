@@ -1,0 +1,45 @@
+1. Nullish Coalescing Operator
+    In JavaScript, the nullish coalescing operator (??) returns the right-hand side operand when the left-hand side operand is null or undefined, and otherwise returns the left-hand side operand.
+    If the provided argument is 0 then it is considered as 0 instead of returning the right-hand side operand
+
+    AgeDetails = age ?? 25 //if age is null/undefined then AgeDetails will be 25 else value will be of age
+
+2. Optional Chaining
+    Syntax: question mark and dot (?.) to check if the object property is existing or not.
+    Can be used for functions also (Ex: kyle.printName?.())
+
+    let details;
+    console.log(details?.city) // undefined - checking if city exists in details;
+    console.log(details.city) // Uncaught TypeError: Cannot read properties of undefined (reading 'city')
+
+3. Plain Object vs Map
+
+    Map: Can have keys of any type (objects, arrays, functions, symbols, etc.).
+    Object: Only supports strings and symbols as keys (other types get converted to strings).
+
+    let map = new Map();
+    let objKey = { id: 1 };
+
+    map.set(objKey, "Object as Key");
+    console.log(map.get(objKey)); // Output: Object as Key
+
+    let obj = {};
+    obj[objKey] = "Object as Key"; 
+    console.log(obj); // Output: { '[object Object]': 'Object as Key' } - Key gets converted to string
+
+    
+    let ages = {
+    Boris: 28,
+    John: 29,
+    };
+    console.log(ages.Boris); // 28
+    console.log("toString" in ages); // true
+    "toString" returns true, because of the prototypical inheritance.
+
+   Object first checks for the property name and then if it is not found it checks in the prototype object.
+    let ages = new Map();
+
+    // set the value
+    ages.set("Boris", 28);
+    ages.get("Boris"); //28
+    ages.has("toString"); //false

@@ -1,0 +1,56 @@
+Directives
+<!-- 
+There are three kinds of directives in Angular: 
+ 1. Components—directives with a template. 
+ 2. Structural directives—change the DOM layout by adding and removing DOM elements. *ngIf, *ngFor, *ngSwitch
+ 3. Attribute directives—change the appearance or behavior of an element, component, or another directive.
+    It doesn't add/remove element to the DOM. It changes the appearance of that element. 
+    ngStyle and ngClass. Both attr  directives are used for dynamic styling.
+ 4. Directives are instructions in the DOM.
+ 5. <ng-template> -
+      1. is a virtual element and it will be commented in the dom .
+      2. it is used along with structural directives like *ngIf, *ngFor, *ngSwitch.
+      3. only the content inside ng-template element will be added to the dom. ng-template will not be added
+         to the dom.
+      e.g;
+      <div *ngIf="true">Hello</div> is converted internally as
+      <ng-template [ngIf]="true">
+        <div>Hello</div>
+    </ng-template>
+6.  <ng-container> -
+     1. Avoid adding element to the DOM with the help of ng-container
+     2. We should use ng-container when we just want to apply multiple structural directives without adding any
+        extra element in our DOM. 
+        <ng-container *ngFor = "let item of items">
+          <div *ngIf = "item.id">{{item.name}}</div> 
+    </ng-container>
+ -->
+
+ Pipes
+<!--
+    1. A pipe takes in data as input and transforms it to a desired output.
+    2. To transform data we use pipe operator {{ name | lowerCase}}
+    3. A pipe can accept any number of optional parameters to fine-tune its output. To add parameters to a pipe, follow the pipe name with a
+       colon ( : ) and then the parameter value (such as currency:'EUR'). If the pipe accepts multiple parameters, separate the values with colons (such as slice:1:5)
+    4. we can chain pipes.
+       e.g, {{ birthday | date | uppercase}} or {{  birthday | date:'fullDate' | uppercase}}
+    5. we can create custome pipes. @Pipe({name: 'exponentialStrength'}), 
+       pipe is a class and it takes object with two key:value pairs  1. name 2. pure
+       To tell Angular that this is a pipe, you apply the @Pipe decorator, which you import from the core Angular library.
+    6. pure and impure pipes.
+       
+       By default pipes are pure and set to true internally. @Pipe({name: 'exponentialStrength',pure: true})
+       Angular executes a pure pipe only when it detects a pure change to the input value. 
+       A pure change is either a change to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object).
+       *view gets updated for change in input value or change in object reference.
+       
+       Impure pipe:
+       @Pipe({name: 'exponentialStrength', pure: false})
+       Angular executes an impure pipe during every component change detection cycle. An impure pipe is called as often as every keystroke or mouse-move.
+       *view gets updated for every DOM event.
+  7.  async pipe updates the view once data comes from http request(observable) or promise
+      e.g,  var x = new promise((resolve,reject) => 
+        setTimeOut(resolve('done'),1000));
+        in html {{x}} output is  [object,object] since promise is an object. view doesn't get updated after 1 sec'
+        in html {{x | async}} output is done. view gets updated after 1 sec'
+-->

@@ -1,0 +1,42 @@
+Forms
+<!--
+  classes
+  ng-touched, untouched
+  ng- dirty, pristine
+  ng-valid, invalid
+   *Defining a name attribute is a requirement when using [(ngModel)] in combination with a form. error if name attribute
+   is not added to element which has [(ngModel)]
+   *Internally, Angular creates FormControl instances and registers them with an NgForm directive that Angular attached to the <form> tag.
+   Each FormControl is registered under the name you assigned to the name attribute. 
+   *Using ngModel in a form gives you more than just two-way data binding. It also tells you if the user touched the control, if the value changed, 
+   or if the value became invalid.
+
+   Model-driven forms:
+    1. setValue is used to update all form fields, partial update cannot be done and it will throw an error
+    2. patchValue - used to update partial data. can also be used to update full data
+    3. Reactive forms can be build in two ways 1. using formGroup and formControl Classes 2. using formBuilder
+    4. formBuilder has 3 methods control() , group() and array()
+    5. formBuilder reduces the repetation code like new FormGroup(), new FormControl()
+    6. http://csharp-video-tutorials.blogspot.com/2018/10/angular-reactive-forms-validation.html
+    7. valueChanges is a property present in abstract control class and it emits a value everytime a value is changed in formGroup
+    or formControl. We have to subscribe to it to get the value
+
+  Model Driven forms are easy to test.  TDF are difficult to do unit test
+  MD forms are great for complex forms  TD forms are great for simple forms.
+  Most of the logic is in component     Most of the logic is in html page
+  can add dynamic elements and do validations
+  more code is required than TD forms
+  Two classes are required to create MDF
+  1. formGroup
+  2. formControl
+  MOdel driven form building blocks
+  1. formControl
+  2. formGroup
+  3. formArray - an array which has formCOntrol, formGroup and nested formArray
+  * formArray is used when dynamic form fields are added to the form. formGroup controls is an object
+  whereas formArray controls is an array console.log()
+
+  formGroup represents entire form or subset of form fields, whereas formArray represents collection of
+  form controls that can grow or shrink
+
+  -->

@@ -1,0 +1,25 @@
+What is Lazy Loading?
+
+    Lazy loading is a technique in Angular that loads feature modules only when needed instead of loading them upfront.
+    This helps improve performance by reducing the initial bundle size, leading to faster application startup times.
+
+Why do we need it?
+
+    Performance: It reduces the initial load time of the app.
+    Efficiency: It loads only the required parts of the app when needed.
+
+    import { NgModule } from '@angular/core';
+    import { RouterModule, Routes } from '@angular/router';
+
+    const routes: Routes = [
+        {
+            path: 'feature',
+            loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
+        }
+    ];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+    })
+    export class AppRoutingModule { }

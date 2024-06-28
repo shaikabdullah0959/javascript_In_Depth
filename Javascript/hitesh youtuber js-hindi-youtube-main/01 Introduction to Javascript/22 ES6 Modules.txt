@@ -1,0 +1,26 @@
+JavaScript modules are a way to structure and organize code into separate files, allowing you to export and import functionality across different files.
+They help in making the code more modular, reusable, and maintainable.
+
+Key Concepts
+    Export: This allows you to make variables, functions, or classes available for use in other modules.
+    Import: This allows you to use functionality from other modules in your current module.
+
+Types of Exports
+    Named Exports: Multiple items can be exported from a module with their specific names.
+    Default Export: A single item is exported as the main export of the module.
+
+    // file.js
+    export const name = "John";
+    export function greet() {
+        console.log("Hello");
+    }
+
+    export default function greeting() {
+     console.log("Hello");
+    }
+
+
+   // app.js
+  import greeting, { name, greet } from './file.js';
+
+

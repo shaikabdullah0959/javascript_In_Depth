@@ -1,0 +1,73 @@
+
+DSA patterns by Parik Jain
+
+1. Two Pointers 
+2. Sliding Window 
+3. Prefix Sums 
+4. Merge Intervals 
+5. Binary Search (and Variants) (Modified Binary Search)
+6. Sorting-Based Patterns 
+7. Fast and Slow Pointers 
+8. Backtracking & Recursive Search 
+9. Divide and Conquer 
+10. Linked List Techniques (Dummy Node, Linked List In-Place Reversal ) 
+11. Stacks and Queues 
+12. Monotonic Stack / Queue 
+13. Expression Evaluation (Two Stacks) 
+14. String Manipulation & Regular Expressions 
+15. Hashmaps & Frequency Counting 
+16. Binary Trees & BSTs (Traversal, Construction, Properties) 
+17. Path Sum & Root-to-Leaf Techniques 
+18. Kth Largest/Smallest Elements (Heaps / QuickSelect) 
+19. Top K Frequent Elements (Top 'k' Elements)
+20. Merge K Sorted Lists 
+21. Dynamic Programming (Including Knapsack, Range DP, etc.) 
+22. Greedy & Interval Partitioning 
+23. Graph Traversals (BFS, DFS) 
+24. Graph Algorithms (DAGs, MSTs, Shortest Paths, etc.) 
+25. Design Problems (LRU Cache, Twitter, etc.)
+
+
+Quick Select
+Overlapping Intervals
+Matrix Traversal
+Kadane's Algorithm
+Topological Sort
+Subset
+hashtable
+
+list of questions for each pattern - https://algomaster.io/practice/dsa-patterns
+list of questions for each pattern - https://docs.google.com/spreadsheets/d/1GBC4Lhnqk5sz38K2C3IT4NeFAdBW2tl1I4dv_BxhIQQ/edit?gid=0#gid=0)
+
+https://www.youtube.com/watch?v=xo7XrRVxH8Y
+https://www.youtube.com/watch?v=eiC58R16hb8
+https://www.youtube.com/watch?v=tTyqtk3V-h4 - All leet code patterns (https://docs.google.com/spreadsheets/d/1GBC4Lhnqk5sz38K2C3IT4NeFAdBW2tl1I4dv_BxhIQQ/edit?gid=0#gid=0)
+https://www.youtube.com/watch?v=tTyqtk3V-h4 - https://learnyard.com/practice/dsa (https://read.learnyard.com/dsa/reverse-string/)
+https://www.youtube.com/watch?v=43mN80PML8U
+https://www.youtube.com/watch?v=DjYZk8nrXVY- important DSA patterns - Leet code
+
+End of DSA patterns
+
+1. https://www.youtube.com/watch?v=DjYZk8nrXVY&list=PLG2BS7TpBTu21qKiPxWlGudOdatxTfRq-&index=26
+
+0:33 => Prefix Sum
+1:25 => Two Pointer
+2:05 => Sliding Window
+2:54 => Fast & Slow Pointer
+3:39 => Linked List In-Place Reversal 
+4:36 => Monotonic Stack
+5:26 => Top 'k' Elements
+6:14 => Quick Select
+6:33 => Overlapping Intervals
+7:25 => Modified Binary Search 
+8:56 => Depth-First Search(DFS)
+9:32 => Breadth-First Search(BFS)
+10:11 => Matrix Traversal
+11:04 => Backtracking
+11:52 => Dynamic Programming
+
+
+
+https://www.youtube.com/watch?v=xo7XrRVxH8Y&list=PLG2BS7TpBTu21qKiPxWlGudOdatxTfRq-&index=26
+
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed

@@ -1,0 +1,18 @@
+Template-driven Forms
+What are Template-driven Forms?
+
+In Template-driven forms You design the form in the HTML template using directives.
+structure of the form, validation of the fields and format of the fields are taken care in html itself.
+
+Why do we need it?
+
+Simplicity: It is simple and easy to use for basic forms.
+Declarative: The form logic is declared in the template.
+
+<form #f=ngForm>
+<input type="text" name="firstName" ngModel> // name is mandatory while using ngModel in TDF.
+                                                ngModel looks for name attribute and add it to 
+                                                the global ngForm object
+</form>
+
+{{ f.value | json }} - displays the values of the form

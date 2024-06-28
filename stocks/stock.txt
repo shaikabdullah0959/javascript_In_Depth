@@ -1,0 +1,529 @@
+Mutual fund/Stock Market
+
+Invest in Equity mutual funds 
+
+Plan - Direct vs regular -> Direct has higher returns
+
+Direct plans offer higher returns due to a lower expense ratio than regular funds. You get the benefit from the exclusion of distributor commissions, which leads to higher returns. Unlike direct plans, regular plans have a higher expense ratio, which eats out your return and offers slightly lower returns.
+
+
+Option Growth vs IDCW Reinvest vs IDCW Payout
+                                IDCW: Income Distribution cum Capital Withdrawal (previously called Dividend)
+
+Which is better Mutual Fund ->  growth or IDCW reinvestment?
+
+
+Growth Plan
+
+Usually higher than the IDCW plan as it focuses on long-term wealth creation. Dividend income is taxable as per the individual's income tax slab rate. Short-term capital gains or long-term capital gains are applicable depending on the holding period of investment.
+
+
+
+Stock Market
+https://www.youtube.com/watch?v=lqk2LppTl84
+How to pick a stock - screener.in
+1.  Company should be from Market leaders
+2. Good free cash flow
+3. ROE - return on Equity should be minimum 15%
+4. Then check fundamental analysis, evaluation  and technical analysis
+
+
+Equity represents ownership in a company.
+Owner’s equity means owner’s ownership.
+Owner’s equity is also known as Net Equity
+ Net Equity = Total assets - borrowings
+
+Stock/Share 
+
+Primary Market/Secondary Market
+
+The primary market in the share market is where new securities/shares are created and sold for the first time. It is also known as the new issue market. 
+Initial Public Offering (IPO): The most common form of a primary market transaction. When a company decides to go public and offer its shares to the public for the first time, it conducts an IPO. Investors buy these new shares directly from the company and fund goes to the company
+
+The secondary market is where previously issued securities such as stocks, bonds, and other financial instruments are bought and sold among investors. Unlike the primary market, where securities/shares are sold directly by the issuer(Business/company), the secondary market involves transactions between investors
+
+
+Issuer -> PM -> SM   ->    Investor
+                                    <-
+All the funds from PM goes to company and the shares issued by the  issuer(company ) are listed on SM. Then buy and sell of shares occur in SM(NSE/BSE) between investors.
+
+Shares should be bought  based on intrinsic value not on market value
+
+Ways to find intrinsic value
+1. Comparison with other companies
+2. Discounted cash flow model
+
+
+https://ticker.finology.in/company/RELIANCE
+Screener.in
+
+FV - Face value
+
+Initial price of the share set by the promoter(company owner)
+
+EPS - Earning per share
+
+Company having 4 partners earned 100 rs in a year. Each partner’s profit is 25 rs. Here 25 is EPS…
+
+EPS  = Net profit/ no of shares
+
+
+P/E = price of the share/EPS 
+
+
+        Lower PE -> Lower is the stock price,  Lower PE -> might be bcoz of slow growth or -ve growth or future prospects are not great
+       Higher PE -> Higher is the stock price,  Higher PE ->  might be bcoz of high growth or greater future prospects
+
+P/E  has to be compared with peers or industry avg…
+
+Indiainfoonline.com for peer comparison 
+
+Market cap -> No of shares * price of one share
+Enterprise value  -> Actual value of the company (Lesson 3)
+Standalone  P&L(Profit and loss) -> Company’s earning by its business
+Consolidated P&L(Profit and loss) -> Company’s earning by its business and  the revenue earned by investing in other companies.
+
+P/B -> price of share/book value
+
+Book Value ->  if the shop is owned by two partners and they sell the shop for 100rs then each will get 50rs. Here 50rs is the book value per share…
+
+Book Value  =  price of the company while selling total no of shares.
+ *** While picking stocks P/B should be considered for companies who have assets like Tata steel( e.g -> machineries)  and should not be considered for companies like IT bcoz they don’t have assets
+
+Dividend Yield  -> part of the profit earned in a year by the company will be shared to the share holders. That amount is Dividend yield.
+                                 If Dividend yield is high then company is low growth company and share value of the company will not increase much
+
+Promoter Holding -> percentage of the shares owned the owner/s of the company. PH should be > 30% atleast
+                                      If PH > 30% then pledge % should be less. This is important point.
+    				       if pledge % is high -> this indicates promoter/owner has taken loan by giving the share % to the person who has given loan. Once the loan is returned shares will be owned  				       by the owner again. (Shares ko girvi rakha hain by taking loan by the owner…)
+LESSON 4
+
+PAT Margin/Net Margin ->
+Profit After Tax(PAT)
+
+Example -> cost of pen = 10rs
+                     Selling price of pen =. 20rs
+                     Profit = 10rs
+                     Expenses for selling pen = 5rs
+                     Net profit =. profit -  expenses = 10 - 5 = 5rs
+PAT margin (always calculated on selling price) = 5/20 * 100 = 25%
+PAT Margin/Net Margin is real profit
+
+ROE ( Return on Equity) -> Money earned by company based on share holder’s money
+
+ROE =  Net profit/share holders equity * 100.  (Equity means money)
+
+
+            Net profit = 100rs
+	    share holders equity = 500rs
+             ROE = 100/500 * 100  = 20 %
+ROE should be good 
+
+Debt Equity should be almost Zero 
+
+ROE should be good even if PAT Margin is less and Debt Equity is almost 0
+
+IF ROE is good when debt equity is more then the stock might not be good…
+
+ROE > 20% is considered good
+
+Turn over is total sales/Top line
+Profit after tax - bottom line
+
+
+       Share split:                    Bonus share
+1. FV decreases              No change in FV
+2. No Profit sharing.       Reserve of profits is shared
+3. 1: 5                               1: 5
+       Each share is              For every 5 shares we will get 1 extra share
+       Split into 5 shares
+
+Moneycontrol.in
+Under corporate actions we can see share split/ bonus share information 
+
+
+6Hours
+Upper circuit/Lower Circuit - SEBI sets upper circuit or lower circuit for companies. It can be 2%, 5%, 10%, 20%,40%
+For example -> A stock price can increase maximum by 20% or fall by max 20% in a single day based on the Last traded price of previous day
+
+NSE has shares, future & options(derivatives), debentures - Many companies provides all of these or few of these. 
+
+A company who provides future & options can increase/fall by more than 20%
+
+Orders based on number of shares
+
+AON order - All or nothing order
+MF order- Minimum fill order
+
+Orders based on price
+Market order
+Limit order
+Stop loss market order
+Stop loss limit order
+
+
+BSE- SENSEX INDEX     			NSE - NIFTY INDEX
+
+SENSEX INDEX,  NIFTY INDEX are representatives of  stock market performance   
+
+ NIFTY INDEX is based on top 50 companies 
+SENSEX INDEX is based on top 30 companies 
+
+In 2001 a base value was set as 100 for market capitalisation 
+For example company A share price is 500 and no of share holders is 1000 then  market capitalisation  is 500 * 1000 = 5 Lakh
+Now we say Sensex is represented as 100 for 5 lakh
+If company A share price increases the MC market capitalisation increases hence Sensex base value also increases 
+
+
+* Promoter selling shares can be bcoz of two reasons 1. He needs money 2. Want to comply with SEBI. SEBI rule is promoter can have max 75% of the shares.
+* Promoter selling shares is a -ve sign if he needs money
+
+Pledging
+Pledging of shares is a -ve sign. Pledging means share ko girvi rakhna
+
+
+BID ASK SPREAD
+
+BID - Buyer
+ASK - Seller
+
+ BID		ASK             BID ASK SPREAD
+301.00.   301.40       0.40
+
+Technicals
+
+Moneycontrol
+Screener
+Trading view
+
+Rules to follow 
+1. Never buy a stock of company listed only in BSE
+
+
+Book Value/Worth - original value
+E.g, suppose a house is built at a price of 1 cr and  now if owner is selling at 2cr
+Then 1 cr is book value and current price is 2cr
+In share market terms 2cr is current share price and actual share price is 1 cr also known as book value
+
+
+Large cap.       Mid cap.     Small cap 
+Top 100.           101-250.    251-500 companies based on market	capitalisation 
+
+
+FV - Face value
+
+Initial price of the share set by the promoter(company owner)
+
+EPS - Earning per share
+
+Company having 4 partners earned 100 rs in a year. Each partner’s profit is 25 rs. Here 25 is EPS…
+
+EPS  = Net profit/ no of shares
+
+
+P/E = price of the share/EPS  (8:35 minutes in 15 hour video of sagar dodeja)
+
+Dividend Yield  -> part of the profit earned in a year by the company will be shared to the share holders. That amount is Dividend yield.
+                                 If Dividend yield is high then company is low growth company and share value of the company will not increase much
+
+ROCE - Return on capital employed /capital invested by the management of the company
+
+             ROCE > 30% -> Great company
+15% < ROCE < 30%  -> good company
+             ROCE < 15% -> no Trade
+
+ROE - Return on Equity
+
+Return on the share holders equity/money
+ROE will be good if ROCE is good i.e, if company performs then only return will be good
+ROE > 20% is considered good
+
+Debt to Equity 
+( Debt means loan amount)  and equity - is amount of all share holders + amount of company reserves
+
+D/E should always be less.
+
+
+            D/E  < 15% -> Great company
+15% < D/E  < 50%  -> good company
+             D/E  > 50% -> no Trade
+
+
+  ROCE > 30% AND   D/E  < 15%
+
+*If current price far greater than book value then we should not but that stock
+
+
+current price  book value
+1200 			100.                         Don’t buy
+300                           100                           Normal we can buy it
+80                              100                           we can buy based on conditions
+10                               100			 Don’t buy
+
+
+How to read profit and loss 9:24 mins in 12 hrs video
+How to read balance sheet  9:37 mins (other liabilities should not be more)
+
+Cash flows 
+Cash from operating activities should increase and it’s a good sign
+
+Shareholding pattern 9:48min
+If public (retail investor) shareholding of a company is more than 10%  then No trade
+
+
+Candle stick 9:58 min
+
+Green and red candles
+
+Candles has body and wick
+
+Green candle is +ve and red candle is -ve
+
+Green candle terms ->  lowest -> opening price -> closing price -> highest. (Bottom to top)
+
+Green candle terms ->  highest -> opening price -> closing price -> lowest (top to Bottom)
+   
+
+Company List
+S40.		         S40NXT.      				S250
+Large cap		Small/Mid cap			small/mid/large cap
+Debt free								Roce >15%	
+Brand value high							D/E < 50%
+Market leaders							Net profit > 100cr
+Roce >15%
+Non govt
+Future growth
+
+
+At any point of time only 9% of the total amount should be invested in a single company. And 9% should be splitted into 3%, 3%, 3%
+
+
+Strategies to buy a stock
+1. BB Strategy - Bollinger Bands Strategy - Regression (Non Linear)
+    * Analysis: Short-term strategy for quick profit booking
+    * Platform: Upstox
+2. Moving Average Strategy (MAS) - Simple Moving + Compounded Moving Average
+    * Long-term strategy to park your money and forget for at least 6 months
+    * Platform: Upstox
+3. HDS - High Dividend-Yield Strategy - Companies providing continuous dividends
+    * Platform: Zerodha
+4. UP20 Strategy - Good strategy for gaining around 20% profit
+    * Platform: Upstox
+5. Unicorn Strategy - Good stocks at the greatest prices they can possibly offer
+    * Platform: Zerodha
+Investment Diversification
+* We will diversify investments in all strategies.
+* Example: With 1 lakh, 20,000 will be invested in each strategy.
+Paper Investments
+* In the month of August, you will do paper investments.
+
+Tools to be used
+TRADINGVIEW - alternate go charting
+SCREENER.IN
+TICKERTAPE
+ECONOMIC TIMES PREMIUM - STOCK REPORTS GENERATE
+UPSTOX ACCOUNT
+ZERODHA ACCOUNT
+
+
+Strategy Name: BBS (Bollinger Bands + PIOTROSKI SCAN Strategy) - APPLICABLE IN S250+ COMPANIES
+LEARN ABOUT STANDARD DEVIATION FOR THIS STRATEGY
+Short Term Strategy - You Can Stay Invested Anywhere Between 1 Trading to 10 Trading Days. - See daily chart I.e, 1D to check BB is applicable or not
+Profit Potential - Nearly 4% upto 10%.
+Rules:
+* Don't be greedy when the stock is going up.
+* Exit at maximum 10% profit or after 10 trading days, whichever comes first.
+* Trading days do not include Saturdays, Sundays, or public holidays.
+In Which Type of Companies, This Strategy is Applicable?
+This Strategy is Applicable in S250+ Companies.
+This Strategy has a Strike Rate of 93% in the Past 1 Year.
+In those 7% of the Cases when the Stock Price is Going Down, Book Your Loss at a Fall of 4%.
+
+First Step is to Form the List of Those Companies.
+Criteria
+1. Debt to Equity < 0.5
+2. Return on Capital Employed > 15
+3. Net Profit > 150 Crore
+4. Pledged Percentage = 0
+5. Piotroski Score > 5 (Indicates Good Fundamentals)
+
+SCREENER QUERY  will fetch S250+ companies
+Debt to Equity < 0.5 AND
+Return on Capital Employed > 15 AND
+Net Profit > 150 AND
+Pledged Percentage = 0 AND
+Piotroski Score > 5
+
+And add settings in tradingview website
+
+Length 20
+Basis MA Type. SMA(dropdown) simple moving average- SMA
+Source close
+stdDev 1.9 standard deviation
+Offset 1
+
+
+Understand Bollinger bands in chart https://www.youtube.com/watch?v=Mg-n7jYc13Y - 1:35 mins
+
+Steps to be taken care while using BB strategy
+
+1. Bottom green line in Bollinger band is buying line. Red candle should go below green line and the next day there should be green candle which has to be increased by same or more percentage than the red candle fall percentage. Then on 3rd day buy the stock with a price near to previous closing day price (buying price should not exceed 1.5%  higher than previous closing price). Then wait for10% increase in price or sell it within 10 days.
+Also, After buying the stock if the price falls by 4% the sell it by adding stop loss of 4%
+2.  Add relative strength index indicator with settings
+          RSI                10
+	Source           close
+        MA Type        SMA
+        MA Length    10
+       MA stdDev.   1.9
+
+3. Moving average convergence divergence indicator with settings
+	Fast length                 10
+      Slow length                  20
+      Signal smoothing         9
+      Oscillator ma type - ema
+     Signal line ma type - ema
+
+* Where there red candle touching green line in B band then look for relative strength index indicator -> graph should be between 30 and 70 and we can buy the stock
+        If graph is below 30, it means it’s over sold
+        If graph is above 70, it means it’s over bought
+        If graph is below 30 or above 70 we will not buy the stock
+   
+SIMPLE  Moving Average Strategy (MAS) - Simple Moving + Compounded Moving Average used for s50, s250nxt - See weekly chart for long term investment
+Add Indicators - > 
+1. Rob Booker Knoxville divergence with settings Bars black 150, RSI Period 10, Momentum period 10
+2. relative strength index indicator  with the settings used in BB strategy
+3. Simple moving averages (50, 100, 200) by cinematography with settings (refer screenshot) and add colours black, red, green in style tab
+
+ BRG Buy - black red green buyWhen to buy the stock in MAS strategy
+   1. Lines should be in the order Black red green  from top and below green line there should be candles
+2. There should be downward trend with slopy red line
+3.  At the same time  check RSI is between 30 and 70
+  If three conditions are met buy the stock
+
+When to sell the stock in MAS strategy
+If the line are in the order Black, red, green from bottom and candles should be above green line then it’s time to sell. And rsi should be above 70 
+
+
+
+
+
+My dear friends, this is the list of all the classes of Batch 9 till today
+CLASS 1 - https://youtu.be/O-0K2-aKCz8 - Various stategies to invest in Stock Market
+CLASS 2 - https://youtu.be/Mg-n7jYc13Y   - Bollinger Bands strategy
+CLASS 3 - https://youtu.be/Vvt3wkT7nbg.  - Bollinger Bands strategy practice
+CLASS 4 - https://youtu.be/UXH1qMVUMN4
+CLASS 5 - https://youtu.be/P1Za8ulPVLQ.  - bank stocks and filtering of dividend stocks
+CLASS 6 - https://youtu.be/k71g79Aqqas - filter top companies in each sector to make s50 list
+CLASS 7 - https://youtu.be/r3QhiCh4LAI - filter top companies in each sector to make s50 list
+CLASS 8 - https://youtu.be/CNZv9MdXtZg -  Bollinger Bands strategy + relative strength index indicator 
+CLASS 9 -https://www.youtube.com/watch?v=V1z2Sm477S8 - Moving Average Strategy EXPLAINED starting at 20Min
+CLASS 10- https://www.youtube.com/watch?v=VEa1jRDV06k -  Instructions for market trading.
+CLASS 11 - https://www.youtube.com/watch?v=b3r9wcUDISw  - support n resistance 
+CLASS 12 - https://www.youtube.com/watch?v=AwCL4EWBYno
+
+
+
+
+Q1 -> when we place a GTT Sell order for 10% then what will happen if on 10th day the stock has increased by only 7%
+Q2 -> when we invest for long term then don’t we sell it and buy it based on share price fall
+
+
+NSEINDIA website gives correct information about NIFTY
+
+SGXNIFTY 
+
+S50 List
+How to make S50 list
+1. Select a sector, click on edit columns, enable Market capitalization, Sales latest quarter, YOY Quarterly sales growth,  YOY Quarterly profit growth, Price to Earning, Dividend yield, Return on capital employed, Average return on equity 3Years, Pledged percentage, Industry PE, Price to book value
+2. Download the list from screen based on above filters
+3. From the list, remove the companies which has Pledged percentage, remove the companies which are not listed in both NSE and BSE
+4. Remove companies whose Debt to equity is more than 15% I.e > 0.15
+5. Remove companies whose YOY Quarterly profit growth is -ve and Net profit latest quarter is -ve
+6. Remove stock with high Price to book value
+7. Remove stock with high public holding or Promoter holding < 50%. Also remove if no DII/FII holdings
+8. Remove stock with Return on capital employed < 10%
+9. After all above filters if there are multiple companies left then remove companies whose market capitalisation is less than 5% of the top company
+
+
+Stock purchasing rule
+    * Avoid buying in the first hour of the market due to volatility.
+    * Invest after 11 AM.
+* Portfolio Management:
+    * Limit the number of companies in your portfolio to 15-20.
+* Due Diligence:
+    * Before buying, ensure there's no negative news about the company.
+    * Check the RSI (Relative Strength Index) before buying from BBS (presumably a brokerage or platform).
+Fund Management Strategies
+* Unicorn: SMA + RSI + Knoxville - Long-term strategies with potential results in 3-4 months.
+* BBS: BBS + Piotroski Scan - Short-term strategies with potential results in 1 day to 10 trading days.
+* HDY: High Dividend Yield Strategy
+* UP20: Strategy (details to be provided next week) - wing trading strategy with potential results in 1-1.5 months.
+* Trading Patterns: - Short-term strategies with potential results in 1 day to 10 trading days.
+    * Cup and Handle pattern, BTST (Buy Today Sell Tomorrow)
+* Fund Allocation:
+        * The total allocated fund for stocks should be divided in the ratio of 3:2:1:2:1.
+        * Example:
+            * For a total fund of ₹90,000:
+                * ₹30,000 + ₹20,000 + ₹10,000 + ₹20,000 + ₹10,000
+* Zerodha: Recommended for long-term strategy investments. Daily checks are not required.
+* Upstox: Recommended for short-term and swing trading. Daily checks are necessary.
+    * Task:
+    * Create at least 250+ watchlists in your Upstox account.
+    * Create S50 and S50NXT watchlists in your Zerodha account.
+
+
+
+
+https://www.youtube.com/watch?v=gVT9jzgOAss - MULTI BAGGER STOCKS USING ALPHA AND BETA
+https://www.youtube.com/watch?v=DHaS5cGg42E
+
+
+
+
+Online business
+
+
+https://www.etsy.com/in-en/ - catalyst cult
+
+
+
+
+Sharia complaint stocks
+Islamicly.com
+musaffa
+Screener.in -> to identify whether to buy a stock or not
+
+https://www.ansaar.in - to identify whether a stock is halal or not  creds ->. Gmail/A..99@@@@@
+
+
+
+
+SWING TRADING
+Screener.in
+Screens click
+Create new screen with query
+Net profit preceding 12 months > 200 AND
+Sales growth 5 years > 10 AND
+Profit growth 5 years > 15 AND
+Return on capital employed > 20 AND
+Debt to equity < 0.2 AND
+Public holding < 30
+
+
+Graham theory
+
+Indicator
+Indicator 1 : Envelope Indicator
+Indicator Settings:
+Length - 200
+Time Frame - Daily
+Percent - 14
+Source - close
+
+
+Indicator 2 : Knoxville Divergence - Rob Booker
+Indicator Settings:
+Bars Back- 200
+Time Frame - Daily
+RSI - 14
+Momentum - 20

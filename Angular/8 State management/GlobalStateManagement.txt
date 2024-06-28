@@ -1,0 +1,41 @@
+Global State Management
+What is Global State Management?
+
+Global state management in Angular is like managing the overall state of a house. It deals with data that needs to be shared across multiple components.
+
+Why do we need it?
+
+Consistency: It ensures consistency of data across different parts of the app.
+Scalability: It makes it easier to scale and maintain large applications.
+
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class StateService {
+  private state = new BehaviorSubject<number>(0);
+  state$ = this.state.asObservable();
+
+  setState(value: number) {
+    this.state.next(value);
+  }
+}
+
+import { Component } from '@angular/core';
+import { StateService } from './state.service';
+
+@Component({
+  selector: 'app-my-component',
+  template: '<p>{{stateValue | async}}</p><button (click)="increment()">Increment</button>'
+})
+export class MyComponent {
+  stateValue = this.stateService.state$;
+
+  constructor(private stateService: StateService) { }
+
+  increment() {
+    this.stateService.setState(this.stateService.state$.value + 1);
+  }
+}

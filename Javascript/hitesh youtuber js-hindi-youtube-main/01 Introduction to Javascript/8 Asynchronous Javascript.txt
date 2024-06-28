@@ -1,0 +1,61 @@
+Asynchronous  programming 
+ - is a programming paradigm that facilitates non-blocking operations,
+ - allowing a program to perform tasks concurrently without waiting for each task to complete before moving on to the next one.
+ API requests, setTimeout calls or file reading are asynchronous tasks.
+
+Key Concepts in Asynchronous JavaScript
+1. callbacks - A callback is a function passed into another function as an argument, which is then invoked inside the outer function.
+             - A callback is a function that is specified to run after a task completes
+             - excessive use of callbacks can lead to callback hell
+2. Promises - Promises are used to handle asynchronous operations. They represent a value that may be available now, or in the future, or never.
+            - Challenges of callbacks are solved by promises
+3. Async/Await - Async/await is syntactic sugar built on top of Promises
+               - Async/await makes asynchronous code easier to write and read.
+
+index.js
+
+console.log("Start");
+setTimeout(function cb() {
+    console.log("Callback fn executed");
+}, 500);
+console.log("End");
+
+Browser has WebAPI's like
+1. setTimeout
+2. DOM API
+3. fetch()
+4. console
+5. localstorage
+6. location
+
+All browser API's are present in window object. we can call it using window.setTimeout or setTimeout directly.
+
+call stack                code                                             Web API's called
+                        console.log("Start");
+                        function callbackTimer() {
+|     |                    setTimeout(function cb() {                     callbackTimer registered
+|     |                      console.log("Callback fn executed");
+|     |                     }, 500);
+|     |                 }
+|     |                 fetch("api url").then(callback fetch)              callback fetch registered
+ -----                  console.log("End");
+
+        Event Loop      Microtask queue
+                       -----------------------
+                       |                     |
+                       |callback fetch       |
+                       -----------------------
+                       
+                        Event Queue
+                        ---------------------
+                        | callbackTimer     |
+                        |                   |
+                        ---------------------
+* first callback functions are registered
+* Once timer ends or data is fetch from API they will move to respective queues                        
+* All promise related fn will go in microtask queue
+* timer callback functions will go in  callback Queue
+* microtask queue has higher priority over callback queue
+* Event loop will keep on checking call stack. if call stack is empty then first callback fn's in microtask queue will be moved to call stack then once it's done then callback fn's in callback queue will be moved to call stack
+https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=18
+

@@ -1,0 +1,40 @@
+https://www.youtube.com/channel/UCvmqI5F-hOdYV9tj81mPlzA/community?lb=UgkxXaRFNibSLBP86ERv3cRtAbghKgbskhgS
+
+
+5 Patterns and 34 problems that will help you solve any Array problem you come across in coding/Leetcode interviews (these are the same patterns I’ve taught to 1000s of students as a mentor)
+
+∟■ Two Pointers
+→https://lnkd.in/guQmiGqs
+→https://lnkd.in/gShj22Uc
+→https://lnkd.in/gP6Sz9vf
+→https://lnkd.in/gZT-EurH
+→https://lnkd.in/gDhDWYfV
+ 
+∟■Merge Intervals
+→https://lnkd.in/gcvKUYUf
+→https://lnkd.in/gWCKkkTX
+→https://lnkd.in/gU2WY98V
+→https://lnkd.in/gM7RNApx
+→https://lnkd.in/gdapFrjz
+→https://lnkd.in/gN_y_Rwu
+→https://lnkd.in/gqvVX_Vz
+ 
+∟■Sorting
+→https://lnkd.in/g7KTTSQQ
+→https://lnkd.in/gg_M86xW
+→https://lnkd.in/gAbr_PHk
+→https://lnkd.in/g-6zDZK7
+→https://lnkd.in/gcvPFugM
+
+∟■Sliding Window
+→https://lnkd.in/ghvgG3mM
+→https://lnkd.in/gBWuxpwp
+→https://lnkd.in/gtKvXMzB
+→https://lnkd.in/gNwMwEXs
+→https://lnkd.in/g6gr7Ce9 
+
+∟■Prefix Sums
+→https://lnkd.in/gX5-AMA5
+→https://lnkd.in/gvmvAUrY
+→https://lnkd.in/gjfYzWce
+→https://lnkd.in/gcRbtG_H
