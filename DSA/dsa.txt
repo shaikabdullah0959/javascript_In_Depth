@@ -1,0 +1,66 @@
+https://www.youtube.com/watch?v=uqU89z8DRDo - 30 Days DSA plan for job
+
+DSA patterns
+https://www.youtube.com/watch?v=xo7XrRVxH8Y
+https://www.youtube.com/watch?v=eiC58R16hb8
+
+
+https://github.com/singhsanket143/Data-Structures-Algorithms-Problem-Solving - dsa quetions
+https://www.youtube.com/watch?v=43mN80PML8U
+
+
+https://www.youtube.com/watch?v=DjYZk8nrXVY- important DSA patterns - Leet code
+https://www.youtube.com/watch?v=W-_qnPYxHdU - interview bit plan to solve DSA
+https://www.youtube.com/watch?v=Nx4bvwU0DqE - How to start leet code
+https://www.youtube.com/watch?v=Cb7At7agjlc - How to solve leet code
+https://www.youtube.com/watch?v=1Z3RrRYIoVs - Learn DSA in 6 months
+https://www.youtube.com/watch?v=tTyqtk3V-h4 - All leet code patterns
+
+https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt - C++ DSA by Apna college
+https://www.youtube.com/watch?v=yRpLlJmRo2w&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop - Java DSA by Apna college
+https://www.youtube.com/watch?v=rZ41y93P2Qo&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ - DSA Java Kunal
+
+
+2. Grasp Time and Space Complexity:
+* Learn about Big O notation to analyze algorithm efficiency.
+* Understand how to measure time and space complexity of different operations.
+3. Explore Core Data Structures:
+	Arrays: Learn about indexing, manipulation, searching, and sorting.
+	Linked Lists: Understand nodes, traversal, insertion, deletion, and reversal.
+	Stacks: Explore LIFO operations, implementation, and use cases.
+	Queues: Learn FIFO operations, implementation, and applications.
+	Trees: Study binary trees, binary search trees, traversals, and their applications.
+	Graphs: Understand representations (adjacency matrix, adjacency list), traversal algorithms (BFS, DFS), and graph algorithms.
+	Hash Tables: Learn about key-value pairs, collisions, and applications.
+
+* Arrays:
+    * Implement various operations like searching, sorting, reversing, etc.
+    * Explore advanced techniques like two-pointer approach, sliding window, etc.
+* Linked Lists:
+    * Create singly and doubly linked lists.
+    * Implement operations like insertion, deletion, reversal, finding middle, etc.
+* Stacks:
+    * Use arrays or linked lists to implement stacks.
+    * Solve problems involving parentheses balancing, expression evaluation, etc.
+* Queues:
+    * Implement queues using arrays or linked lists.
+    * Solve problems related to BFS, level order traversal, etc.
+* Trees:
+    * Explore binary trees, binary search trees, and their traversals.
+    * Implement tree-based operations like insertion, deletion, searching, etc.
+* Graphs:
+    * Understand graph representations (adjacency matrix, adjacency list).
+    * Implement graph traversal algorithms (BFS, DFS).
+    * Solve problems like shortest path, cycle detection, etc.
+* Hash Tables:
+    * Understand hash functions and collision handling.
+    * Implement hash tables using arrays or objects.
+    * Solve problems involving frequency counting, anagrams, etc.
+4. Conquer Algorithms:
+* Searching: Linear search, binary search.
+* Sorting: Bubble sort, insertion sort, selection sort, merge sort, quick sort, heap sort. 
+* Recursion: Factorial, Fibonacci, tower of Hanoi, etc.
+* Divide and Conquer: Binary search, merge sort.
+* Greedy Algorithms: Activity selection, fractional knapsack.
+* Dynamic Programming: Fibonacci, longest common subsequence, knapsack problem.
+* Backtracking: N-Queens, Sudoku solver.

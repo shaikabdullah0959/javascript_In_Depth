@@ -1,0 +1,70 @@
+closure is a function along with its lexical environment bundled together.
+                
+In JavaScript, closure is a fundamental concept where an inner function has access to the variables of its outer function,
+ even after the outer function has executed and returned.
+
+A closure is created every time a function is defined within another function and retains access to the outer function's scope.
+
+Closure example 1
+
+function x() {
+    var z = 10;
+    function y() {
+        console.log(z);
+    }
+    y();
+}
+x();           
+
+
+Closure example 2
+
+function outer() {
+    var z = 10;
+    function inner() {
+        console.log(z);
+    }
+    return inner; // here closure is returned i.e, inner function and its lexical environment
+}
+
+var x = outer(); // outer fn returns inner function and its lexical environment
+x(); // inner function is called and prints 10
+
+* outer fn is moved into call stack, EC is created for outer fn, then outer is removed from call stack as all statements are executed
+then inner fn is moved to call stack, EC is created for inner fn.
+* variable z present in inner fn has still access to outer function variable even after 
+  outer fn has completed its executing(doesn't exist in call stack)
+
+
+
+for (var i = 1; i <= 3; i++) { // for each iteration same i present in global scope is incremented
+    setTimeout(function() {
+        console.log(i);
+    }, 1000);
+}
+
+This code will log 4 three times because by the time the setTimeout callbacks are executed,
+the loop has completed, and i is 4. To fix this, you can create a closure to capture the current value of i.
+    for (var i = 1; i <= 3; i++) {              for (var i = 1; i <= 3; i++) {
+        (function(i) {                               function a(i) {
+            setTimeout(function() {                      setTimeout(function() {                         
+                console.log(i);                            console.log(i);
+            }, 1000);                                     }, 1000);
+        })(i);                                        }
+    }                                                 a(i); 
+                                                }
+                or
+using let above problem can be solved
+    for (let i = 1; i <= 3; i++) { // for each iteration a new lexical environment is created bcoz of let and value of i is different in each iteration
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    }
+
+
+
+https://www.youtube.com/watch?v=eBTBG4nda2A&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=13 - closures
+
+Summary
+A closure is created when a function is defined within another function, allowing the inner function to access 
+the outer function’s variables even after the outer function has finished executing.

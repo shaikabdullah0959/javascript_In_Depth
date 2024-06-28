@@ -1,0 +1,29 @@
+Array Methods:
+
+    filter, map, find, some, every, reduce methods doesn't mutate the original array and returns a new Array
+    mutate - original array remains unchanged.
+
+forEach Method
+    Mutates the original array, Doesn't return anything.
+
+const items = [
+  { name: "Item 1", price: 50 },
+  { name: "Item 2", price: 150 },
+  { name: "Item 3", price: 100 },
+];
+
+const filteredItems = items.filter((item) => item.price <= 100);
+
+console.log(filteredItems);
+// Output: [{ name: "Item 1", price: 50 }, { name: "Item 3", price: 100 }]
+
+console.log(items);
+// Original array remains unchanged:
+
+// Output: [
+//   { name: "Item 1", price: 50 },
+//   { name: "Item 2", price: 150 },
+//   { name: "Item 3", price: 100 }
+// ]
+
+filteredItems will have new memory address as filter method will return a new Array.

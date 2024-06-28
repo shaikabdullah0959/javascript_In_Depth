@@ -1,0 +1,33 @@
+What are Reactive Forms?
+
+You build the form model in the component class and bind it to the template.
+
+Why do we need it?
+
+Control: It gives you more control over form validation and dynamic changes.
+Testability: It is easier to test compared to template-driven forms.
+
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-my-form',
+  template: `
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <input formControlName="username" required>
+      <button type="submit">Submit</button>
+    </form>
+  `
+})
+export class MyFormComponent {
+  myForm: FormGroup; // FormGroup - collection of form controls
+
+  myForm = new FormGroup({
+    username: new FormControl('', Validators.required)
+    password: new FormControl('')
+  });
+
+  onSubmit() {
+    console.log(this.myForm.value);
+  }
+}

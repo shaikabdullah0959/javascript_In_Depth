@@ -1,0 +1,112 @@
+Pass By Value: Primitives data types follow this pass by value
+ 
+    Primitives data types only change when a new value is assigned to them in memory.
+
+    let  a = 5;
+    let  b = a;
+
+    Pass by value simply means we copy the value and we create that value somewhere else in memory.
+
+
+Pass By Reference: Objects follow this pass by reference.
+
+    If you assign one of the object to another and If you change the reference of one object, then the other object also updates
+
+
+    let obj1 = { name : "Abdullah" };
+    let obj2 = obj1;
+
+    obj2.name = "Shaik";
+
+    console.log(obj1); // { name : "Shaik" }
+    console.log(obj2); // { name : "Shaik" }
+
+    If we don't want to modify original object(obj1) while changing in obj2 then we should clone the object using Object.assign and spread
+
+    Solution 1: let clonedObj = Object.assign({}, obj1);  // will refer to a new memory instead of original obj
+    Solution 2: let clonedObj = {...obj1} // will refer to a new memory instead of original obj
+
+Limitations of Object.assign and spread:
+
+    This doesn't work for nested objects
+   
+    solution is deep clone
+
+### Step-by-Step Explanation:
+
+1. **Original Object (`obj`):**
+   ```javascript
+   let obj = {
+       a: 'a',
+       b: 'b',
+       c: { deep: 'try and copy' },
+   };
+   ```
+
+   This creates an object with a nested object `c`.
+
+2. **Shallow Clones (`clone1` and `clone2`):**
+   - `Object.assign({}, obj)` and `{ ...obj }` both create shallow copies. This means:
+     - Top-level properties (`a` and `b`) are copied by value.
+     - Nested objects (`c`) are copied by reference. Changes to `obj.c` will affect both `clone1` and `clone2`.
+
+3. **Modification to the Original Object:**
+   ```javascript
+   obj.c.deep = 'hahaha';
+   ```
+
+   Since `c` is a reference, both `clone1.c` and `clone2.c` now point to the same modified object (`c`), so the change (`c.deep = 'hahaha'`) is reflected in `clone1` and `clone2`.
+
+4. **Deep Clone (`deepclone`):**
+   ```javascript
+   let deepclone = JSON.parse(JSON.stringify(obj));
+   ```
+
+   This creates a **deep clone**, so `deepclone.c` is a completely independent object. Any changes to `obj.c` after the deep clone operation will not affect `deepclone.c`.
+
+---
+
+### Code Walkthrough and Corrected Version:
+```javascript
+let obj = {
+    a: 'a',
+    b: 'b',
+    c: { deep: 'try and copy' },
+};
+
+// Shallow clones
+let clone1 = Object.assign({}, obj);
+let clone2 = { ...obj };
+
+// Modify the original object's nested property
+obj.c.deep = 'hahaha';
+
+// Logs for shallow clones
+console.log('clone1:', clone1); // clone1.c.deep will also be 'hahaha' because c is a reference.
+console.log('clone2:', clone2); // clone2.c.deep will also be 'hahaha'.
+
+// Create a deep clone
+let deepclone = JSON.parse(JSON.stringify(obj));
+
+// Modify the original object's nested property again
+obj.c.deep = 'new value';
+
+// Logs for deep clone
+console.log('deepclone:', deepclone); // deepclone.c.deep remains 'hahaha'.
+console.log('obj:', obj); // obj.c.deep is now 'new value'.
+```
+
+
+### Key Takeaways:
+1. **Shallow Cloning:**
+   - `Object.assign()` and spread syntax (`{ ...obj }`) create shallow clones. Nested objects share references, so changes to the original nested object affect the clones.
+
+2. **Deep Cloning:**
+   - `JSON.parse(JSON.stringify(obj))` creates a deep clone. Changes to the original nested object do not affect the deep clone.
+
+3. **Best Practices:**
+   - Use shallow clones when you don't need to modify nested objects.
+   - Use deep clones when you need to ensure complete independence between the original and the copy.
+
+
+
