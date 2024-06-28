@@ -1,0 +1,47 @@
+a. when we run the application in browser Angular adds some <script></script> files to index.html.
+   in index.html there will be main.js file which is same as main.ts file in our project and it has the information of 
+  root module and root module has the info of root component.
+   b. NgModule decorator is present in app.module.ts file and it has the info of all the components, modules, services of that module and root component of that module.
+   components are present in declarations array.
+   modules are present in imports array like httpModule, formsModule etc.
+   services are present in providers array
+   root comp is present in bootstrap array.
+
+   c. component decorator is a function with object as a parameter. object has info of selector name, html file path ,
+    css file path etc
+   d. styles property present in component  take  array of strings . eg ['h1{ color : green; border: 1px solid orange}'];
+   e. selectors in component.              usage of selector in html
+      selector : 'app-root'                <app-root></app-root>
+      selector : '.app-root'                <div class="app-root"></div> class selector
+      selector : '[app-root]'                <div app-root></div>  attribute selector.
+      In css for attribute selection we use [] e.g, input[type =" text"] type is an attribute.
+                                                            
+   f. communication between component and html happens through binding
+      1. one way binding  
+          string interpolation {{}}, property binding  component -> html
+          event binding    html -> component
+      2. two way binding   c-> html and htlm -> c
+      3. one difference between interpolation and property binding is when a non string value(i.e, boolean true or false) is
+      assigned to attribute of html interpolation doesn't make a difference for both true or false where as p binding does.
+      e.g [disabled] ='true/false' disables/enables input fields
+          disabled='{{true/false}}' disables in both cases.
+      4. in case of binding a value to a string interpolation is used.
+         e.g <img src="images/{{imageName}}"  imageName is a variable in Component file.
+      5. to pass a value through event binding use $event. e.g (keyup) ="sendData($event)". To access the value in class
+      use event.target.value.
+      6. For two way binding ngModel is required and to be able to use it FormsModule is required. so import it in app.module.ts file.
+   g. Parent and child component communicate through @Input and @Output decorator.
+      passing data to childComp through propertyBinding.
+      e.g, <childComponent [fName] ="firstName"></childComponent> fName is in childComponent and firstName is a
+      variable in parentComponent.   
+      property and event Binding can be used on custom properties and methods and inbuilt attributes.
+      custom property and event Binding - [fName]="firstName", (setLName)="setLastName()" 
+      inbuilt property and event Binding - [disabled]="true" (click)="xyz()"
+   f. We can access DOM element in two ways.
+      1. template reference variable.
+      e.g in html <input #xyz>  <button (click)="sendData(xyz)">submit</button> 
+          in ts file sendData(data){console.log(data)} > outputs whole element.
+      2. @viewchild() decorator.  > outputs elementRef
+   g. content projection
+   h. view encapsulation pending
+   i. lifecycle hooks pending

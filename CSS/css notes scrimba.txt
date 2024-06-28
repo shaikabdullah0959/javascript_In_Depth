@@ -1,0 +1,112 @@
+1. Each element has default margin top and margin bottom.
+2. margin top and margin bottom is equal to the font size of the element.
+3. to remove default margin top/bottom of an element then make margin-top/margin-bottom :0px
+4. if div and p elements are next to each other and if div has margin bottom of 50px and p has margin top of 50px then
+   margin between both elements is not 100px it is only 50px;
+   if div has margin bottom of 40px and p has margin top of 10px then
+   margin between both elements is not 50px it is 40px; the highest margin(40px) takes the precedence.
+   margin collapsing doesn't have for flex and grid elements.
+5. inline elements doesn't accept height, width and margin, padding, border top and bottom.
+   To accept margin, padding and border top/bottom make inline elements as display: inline-block;
+6. span doesn't have default styling.
+7. order of pseudo links  matters.
+   a:hover { color: red }, a: link { color: green } then a: hover doesn't work a:link has to come first then a:hover.
+8. specificty order: element- class- id - inline( least to greatest)
+9. if css have two stylings for same element then the bottom once take the precedence. p { color: red }, p { color: green } green color applies.
+10 compound selectors div p {}
+11 avoid compound selectors and give preference in adding a class to the element.
+12 add multiple classes if there is repeation of code with few changes.
+    < button class="btn btn-one"> one </button>
+	< button class="btn btn-two"> two </button>
+	btn-one {		
+
+	btn-two {
+	color: red,			color: red,
+	font-size: 16px;	font-size : 20px;
+	}					}
+	replace as
+	.btn { 				btn-one {			btn-two {
+	color: red,			font-size: 16px;	font-size : 20px;
+	}					}					}
+13. CSS UNITS
+	%, px, rem, em
+	PERCENTAGE
+	percentage is always relative to its parent element/percentage is based on the width of the parent
+    <header><h1>abc</h1></header>  
+	since header is block level element it has a width of 100%
+	h1 { width: 50% } -> here width of 50% is relative to header element
+14. max-width can be set to an element to avoid growing the element beyond the specified width.
+    if element width is 700px then the element will not grow beyond 700px;
+	similarly min-width can be used.
+15. PX is absolute unit(pixel is a dot on the screen). EM and REM are relative units.
+15. EM
+	em are relative to parent's font-size. default font size is 16px
+    parent can be immediate parent or it can be move up to body element.
+	1em == parent's font-size, 1.5em == 1.5 * parent's font-size
+	
+	h1 {
+		font-size: 3rem; //3*16px;
+		margin-bottom: 2em; //2*3*16px
+	}
+	if an element has both font-size and margin/padding with em then the em is relative to the font-size of that element
+	instead of being relative to parent element
+16. em has one problem i.e, cascading effect
+    body {
+      font-size: 10px;
+	}
+	.section-one {
+      font-size: 2em; == 2 * 10px section-one inherits from body font-size
+	}
+
+	ul {
+      font-size: 1.5em; == 1.5 * 2 * 10px; // .section-one is parent of ul
+	}
+17. REM
+	the solution for em cascading problem is rem = root em
+	rem is always relative to root of the document. 
+	the root of HTML page is always html element.
+18. UNIT DECISION
+	the problem with px is the font-size might not be similar in all resolutions. to avoid this problem use rem/em
+	general rule of thumb is font-size - rem, padding/margin - em, width - em/percentage.
+19. orientation - landscape -> width of the screen > height of the screen
+                  potrait -> height > width
+20. justify-content normally works horizontally and align-items work vertically 
+	when flex-direction is column
+	justify-content works vertically and align-items work horizontally
+21. we can change the way the div are shown in a webpage.
+    <div class="div1">abc</div><div class="div2">xyz</div>
+	div1{ order:1 } div2{ order:0 } // https://scrimba.com/p/p6wxPhk/ca39K4tW
+	bcoz of order div2 will appear first then div1 in html
+	
+22. if we have big size image in our app. instead of having another small size image for small screen use height, width and object-fit properties to shrink the image.
+23. diplay flex has default direction of row. we can make it column/row-reverse/column-reverse/column-revese.
+    if a div has some width and the child div are many then the div are overflowed i.e the default behaviour(flex-wrap: nowrap)
+	*to avoid overflow of divs and align inside parent div make flex-wrap: wrap;
+	*flex-flow: row wrap; (combination of flex-direction and flex-wrap)
+    justify-content works horizontally( default is flex-start ) and align-items works vertically ( default is stretch- child div stretchs to the height of parent div) 
+
+	*if flex-direction is column then justify-content works vertically and align-items works horizontally
+	align-content works on y-axis just like justify-content on x-axis
+	*align-items works on single row whereas align-content works on all rows present in a parent div.(see scrimba video)
+	*align-items: baseline; makes the text/number  to be on sameline
+	* diff b/w align-items and align-content is if we make align-items center then it center the div vertically in that row  whereas align-content consider
+	  all rows and center whole elements in parent div
+	*Flex basis will default to auto, which will look for the width of the element it has been declared on. If there is no width, it will instead go to the size 
+	of the content inside that element. But it doesn't actually focus on the width, it focuses on the main-axis of the flex container.
+         So, if an element has flex-basis: 500px, while that element's parent has a flex-direction: row, it will set the width of that element to 500px. But, if 
+		 the parent has a flex-direction: column, which changes the main axis, it will now set the height to 500px!
+         This might seem a little strange (because it is), and you might be wondering where it's useful. We'll see a good use case of this very soon!
+        *when using flex-basis min height/width and max-height/width will not allow the element to shrink/grow beyond the given min/max height/width
+24. body is not the whole screen it is only till the content it has inside. but background color for body fills the whole screen.
+    if content is less inside the body to make body whole screen then make min-height:100vh  (https://scrimba.com/p/pvwdXun/c9PMddU4)
+	
+25. Flex is the first layout tool then came the Grid.
+    Flex can be used to work with row/columns one at a time if we want to work with both rows and columns at a time then Grid is the solution.
+	We can define a grid by, on the parent, declaring grid-template-rows and grid-templatecolumns`.
+	To set the widths for your columns (or heights for your rows), all we need to do is place as many values as needed, separated by a space:
+	grid-template-columns: 100px 500px 100px; , grid-template-rows: 100px, 500px, 300px
+	short hand: grid-template: 100px 100px 500px(rows) / 300px 300px 100px; (columns)
+	short hand for row and column: grid-row: 1/3, grid-column: 2/4
+	we can give -ve values as well. -ve values start from right
+	grid-column: span 3 ->stretchs div to 3 columns
+	grid-column: 2/ span -> start at 2 column and stretch 2 columns

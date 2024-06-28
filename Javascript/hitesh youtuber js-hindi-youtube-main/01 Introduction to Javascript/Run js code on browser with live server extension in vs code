@@ -1,0 +1,52 @@
+Steps to Set Up and Run Your Project with Live Server
+Set Up Your Project
+
+Create a New Folder: Create a new folder for your project, for example, my_project.
+Create index.html and index.js: Inside the my_project folder, create two files: index.html and index.js.
+Create HTML and JavaScript Files
+
+index.html:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Server Example</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <script src="index.js"></script>
+</body>
+</html>
+index.js:
+
+    console.log("Hello");
+
+Open Your Project in VS Code
+
+Open VS Code: Launch Visual Studio Code.
+Open the Project Folder: Go to File > Open Folder... and select your my_project folder.
+Install Live Server Extension
+
+Install Live Server: Go to the Extensions view by clicking the Extensions icon in the Activity Bar on the side of the window. Search for Live Server and install the extension by Ritwick Dey.
+Run the Live Server
+
+Open index.html: In the Explorer view, locate and right-click on index.html.
+Open with Live Server: Select Open with Live Server from the context menu.
+View Your Project in the Browser
+
+Your default web browser should open and display the content of index.html.
+You should see "Hello, World!" on the page.
+You should see a console message saying "JavaScript is running!" and an alert saying "Hello from index.js".
+
+
+
+                 OR - Run JS in local
+
+JS runs on browser
+To run outside of browser 
+1. install node
+2. create a file with .js extention e.g, first.js
+3. Run the code using node first.js

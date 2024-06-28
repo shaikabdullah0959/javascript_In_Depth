@@ -1,0 +1,141 @@
+DevOps Kubernetes
+
+kubeadm init --ignore-preflight-errors=all
+ 
+ 
+ kubeadm join 10.128.15.231:6443 --token mks3y2.v03tyyru0gy12mbt \
+           --discovery-token-ca-cert-hash sha256:3de23d42c7002be0893339fbe558ee75e14399e11f22e3f0b34351077b7c4b56
+ 
+Kubectl cluster-info
+Kubectl get nodes
+ 
+Kubectl get nodes -o wide
+ 
+ 
+Pod - abstraction layer that can create and manage container
+ 1 pod = 1 container -single instance of an app
+ 
+ 
+Create pod with container
+Kubectl run firstpod —image=path
+ 
+ 
+Kubectl get pods  - lists all pods
+ 
+Kubectl logs firstpod
+ 
+ 
+Kubectl exe -it firstpod  — /bin/bash  —> login to container
+ 
+Kubectl describe pod firstpod   -> info about container
+ 
+Kubectl delete pod frstpod
+ 
+ 
+Namespace
+Every pod belongs to a namespace  Basically every pod comes under default namespace
+We can create a namespace and assign a pod under it
+Pod is a resource. Everything we create in Kubernetes is a resource
+namespace allows to restrict the access to the users
+ 
+ 
+Kubectl create namespace abc
+Kubectl get namespaces
+Kubectl get pods -o wide - - all-namespaces
+Kubectl get pods -o wide —namespace abc -> list all pods under namespace abc
+Kubectl run firstpod —image=path -> creates pod under default namespace
+Kubectl run firstpod —image=path —namespace abc -> creates pod under abc namespace
+Kubectl delete pod firstpod —namespace abc -> delete pod under abc namespace
+ 
+Kubectl get pods -o wide  —namespace kube-system -> return all the pods of kuberenetes that are required to manage containers
+ 
+Kubectl get pods -o wide —show-labels ->pods with labels
+ 
+Video  number 16
+————————————
+ 
+Kubectl api-resources -> lists all resources in Kubernetes like Pod/ Namespace/ ReplicaSet etc
+ 
+Yaml file in kub.. -> create resources using yaml file
+—————————
+Pod.yaml
+ 
+kind: Pod/ Namespace/ ReplicaSet -> type of resource to create
+apiVersion: v1
+metadata:
+        name: pod1
+        namespace: default
+        labels:                     #mandatory - helps to identify group of same pods in the cluster
+             app: app1         
+spec:
+   containers:
+      - name: abc  # pod with 1 container
+         image: nginx
+      - name: abc       # pod with 2 containers
+         image: nginx
+ 
+kubectl apply —filename pod.yaml -> creates a pod using yaml file 
+kubectl logs pod1 —container/ -c abc(name of container)
+ 
+ 
+Access containers running inside pod
+——————————————————
+Curl ipaddess:port.  Execute this command running in the node like worker1/worker2 not on master
+ 
+ 
+Replica set create multiple pods
+——————
+Pod.yaml
+ 
+kind: ReplicaSet -> type of resource to create
+apiVersion: v1
+metadata:
+        name: pod1  # name of replicaset
+        namespace: default      
+spec:
+   replicas: 4
+   template:
+      metadata:
+          labels:   
+             // name: pod1,pod2,.. #    kubernetes will generate random names to pods      
+             app: app1   
+     spec:
+           containers:
+             - name: abc  # pod with 1 container
+                image: nginx
+    selectors:   #telling replicaSet to select pods having labels app1 and manage those pods only and do not touch any other pods in the cluster
+           matchLabels:
+                        app: app1   
+ 
+Kubectl get replicaset -o wide
+Kubectl get pods -o wide
+Kubectl scale replicaset pod1 —replicas=10
+ 
+ 
+Kubernetes service
+——————————
+Helps us to access app running inside single/group of pods
+Type of services - ClusterIp ( worker node is not accessible from browser), Nodeport ( worker node is accessible from browser)
+ClusterIp- internal virtual load balancer that can forward the request into a single/group of pods…
+Kubectl get services -o wide
+ 
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app.kubernetes.io/name: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+ 
+Kubernetes controllers
+————————————
+* abstraction layer that can create/manage single or group of pods
+Types of controllers:
+* Replicaset
+ - Deployment
+- Networking
+- Scaling
