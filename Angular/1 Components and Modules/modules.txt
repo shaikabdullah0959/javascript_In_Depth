@@ -1,0 +1,62 @@
+Modules: NgModule, declarations, imports, providers, exports, bootstrapping.
+
+Module is a class that bundles the Angular building blocks like components, directives, services and others together,
+so that Angular is aware of all the features in the application
+
+What is an NgModule?
+
+Imagine your Angular app is like a house. To build this house, you need different rooms (components), furniture (directives and pipes), and utilities (services). An NgModule is like a blueprint that organizes these different parts.
+
+Why do we need it?
+
+Organization: It keeps your code organized by grouping related components, directives, and pipes.
+Dependency Management: It helps Angular know what parts of the app need each other.
+Bootstrapping: It tells Angular which component to load first when the app starts.
+
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent } from './app.component';
+
+    @NgModule({
+    declarations: [
+        AppComponent // Declaring the main component
+        MyComponent, // Declaring a component
+        MyDirective, // Declaring a directive
+        MyPipe       // Declaring a pipe
+    ],
+    imports: [
+        BrowserModule // Importing necessary modules
+        CommonModule, // Importing Angular's CommonModule
+        FormsModule   // Importing FormsModule for template-driven forms
+    ],
+    providers: [],
+    exports: [],  //Any component, directive, or pipe listed in the exports array becomes accessible to any other module that imports this module.
+    bootstrap: [AppComponent] // Bootstrapping the main component
+    })
+    export class AppModule { }
+
+Key Sections:
+
+declarations: List of components, directives, and pipes that belong to this module.
+imports: Other modules that this module depends on.
+providers: Services that this module needs.
+exports:  List of components, directives, and pipes which can be used in another module
+bootstrap: The main component that starts the app.
+
+Example of exports:
+
+@NgModule({
+  declarations: [ButtonComponent, CardComponent],
+  imports: [CommonModule],
+  exports: [ButtonComponent, CardComponent]
+})
+export class SharedModule {}
+
+@NgModule({
+  imports: [SharedModule]
+})
+export class FeatureModule {}
+
+ButtonComponent, CardComponent can be used in FeatureModule because of giving its reference in exports array of shared module
+
+To use components/pipes/directives of one module in another module we have to give the reference in exports array.

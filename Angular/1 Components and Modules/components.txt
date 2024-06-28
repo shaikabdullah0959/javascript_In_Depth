@@ -1,14 +1,16 @@
-a. when we run the application in browser Angular adds some <script></script> files to index.html.
-   in index.html there will be main.js file which is same as main.ts file in our project and it has the information of 
-  root module and root module has the info of root component.
+An Angular application starts executing from the angular.json file which defines all the standards and paths of the application.
+It also defines which ‘main file’ and ‘index file’ to execute
+   a. when we run the application in browser Angular adds some <script></script> files to index.html.
+      in index.html there will be main.js file which is same as main.ts file in our project and it has the information of 
+      root module and root module has the info of root component.
    b. NgModule decorator is present in app.module.ts file and it has the info of all the components, modules, services of that module and root component of that module.
-   components are present in declarations array.
-   modules are present in imports array like httpModule, formsModule etc.
-   services are present in providers array
-   root comp is present in bootstrap array.
+      components are present in declarations array.
+      modules are present in imports array like httpModule, formsModule etc.
+      services are present in providers array
+      root comp is present in bootstrap array.
 
    c. component decorator is a function with object as a parameter. object has info of selector name, html file path ,
-    css file path etc
+      css file path etc
    d. styles property present in component  take  array of strings . eg ['h1{ color : green; border: 1px solid orange}'];
    e. selectors in component.              usage of selector in html
       selector : 'app-root'                <app-root></app-root>

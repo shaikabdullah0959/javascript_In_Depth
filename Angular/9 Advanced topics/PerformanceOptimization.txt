@@ -1,0 +1,23 @@
+What is Performance Optimization?
+
+Performance optimization in Angular is like fine-tuning a car for better speed and efficiency. It involves various techniques to make your app faster and more efficient.
+
+Why do we need it?
+
+User Experience: It improves the user experience by making the app faster.
+Resource Management: It efficiently manages resources, reducing load times and memory usage.
+Key Techniques:
+
+Lazy Loading: Load parts of the app only when needed.
+AOT Compilation: Use Ahead-of-Time (AOT) compilation to pre-compile the app.
+OnPush Change Detection: Optimize change detection by using the OnPush strategy.
+Tree Shaking: Remove unused code during the build process.
+
+const routes: Routes = [
+  {
+    path: 'feature',
+    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
+  }
+];
+
+ng build --prod --aot

@@ -1,0 +1,66 @@
+Angular router allows us to switch/navigate from one view to another
+
+What is the Router Module?
+
+  To switch/navigate from one view to another. Router Module is required
+
+    URL Management: It manages the URLs for different views.
+
+    import { NgModule } from '@angular/core';
+    import { RouterModule, Routes } from '@angular/router';
+    import { HomeComponent } from './home/home.component';
+    import { AboutComponent } from './about/about.component';
+
+    const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent }
+    ];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+
+
+    Key terms in Router
+    1. Routes - defined in compnent
+    2. RouterLink - navigate from html element click <a routerLink="/xyz">home</a>
+    3. RouterOutlet - <router-outlet></router-outlet> directive dynamically loads the component for which the
+    route has been called.
+
+Route properties
+    { path: '',
+     component: HomeComponent,
+      redirectTo:'/xyz',
+      pathMatch:'full/prefix',
+      children:
+      outlet:              // tell the route to load in a specific router outlet
+      canActivate:
+      canDeactivate:
+     },
+
+Wildcard routes intercept invalid urls - { path: '**', component: ErrorComponent }
+
+Navigate programatically
+
+constructor(private router:Router)
+
+gotoblogs() {
+  this.router.navigate(['/blogs']);
+}
+
+Route Parameters
+To access current loaded route we can use ActivatedRoute
+
+constructor(private route:ActivatedRoute)
+let id = this.route.snapshot.paramMap.get('id');
+
+Optional Route Parameters
+this.router.navigate(['/blogs', {id: blogs.id}]');
+url -> localhost:4200/blogs;id:1
+
+access Optional Parameters in compnent
+this.route.paramMap.subscribe(param => {
+  param.get('id');
+})

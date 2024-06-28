@@ -1,0 +1,17 @@
+What is Data Binding? communication b/w component and html
+
+Types of Data Binding: one way data binding and two way data binding
+
+one way data binding - component to view(html) or view(html) to component
+
+Interpolation: Displaying data from the class in the template.
+<p>{{title}}</p>
+
+Property Binding: Binding a property in the template to a property in the class.
+<img [src]="imageUrl">
+
+Event Binding: Binding an event in the template to a method in the class.
+<button (click)="handleClick()">Click me</button>
+
+Two-Way Binding: Binding both a property and an event to a class property.
+<input [(ngModel)]="name">

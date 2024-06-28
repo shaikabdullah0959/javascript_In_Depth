@@ -36,4 +36,7 @@ Forms
   * formArray is used when dynamic form fields are added to the form. formGroup controls is an object
   whereas formArray controls is an array console.log()
 
+  formGroup represents entire form or subset of form fields, whereas formArray represents collection of
+  form controls that can grow or shrink
+
   -->
